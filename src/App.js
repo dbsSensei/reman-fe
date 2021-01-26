@@ -1,6 +1,6 @@
 // import Dashboard from './containers/dashboard'
 // import './App.css';
-// import Register from './components/register/register';
+import Register from './components/register/register';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import Login from './components/login/login';
 import Dashbord from './containers/dashboard';
@@ -10,9 +10,9 @@ function App() {
   return (
     <>
       <Router>
-        <Route path="/" component={Dashbord} />
-        <Route path="/login" component={Login} />
-        {/* <Route path="/register" component={Register} /> */}
+        <Route exact path="/" component={Dashbord} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
       </Router>
     </>
   );
