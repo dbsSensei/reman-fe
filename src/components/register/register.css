@@ -1,107 +1,66 @@
-/* .container {
-    margin: 0 100px;
-}
-
-.body {
-    display: inline-block;
-    background-color: #d3d2d2;
-    width: 100%;
-    height: 100%;
-}
-
-.registrasi {
-    margin-top: 100px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.paragraf {
-    margin-top: 100px;
-    text-align: center;
-}
-
-.formulir form input {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    width: 350px;
-    height: 50px;
-    padding: 0 30px;
-} */
-
-/* h1 {
-  font-size: 38px;
-}
-
-input[type='text'] {
-  width: 30%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 15px;
-  background-color: rgb(255, 249, 249);
-  color: rgb(10, 10, 10);
-  font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 2px 2px 2px black;
-}
-
-input[type='password'] {
-  width: 30%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 15px;
-  background-color: rgb(255, 249, 249);
-  color: rgb(10, 10, 10);
-  font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 2px 2px 2px black;
-}
-
-input[type='submit'] {
-  background-color: #ddd;
-  border: none;
-  color: black;
-  padding: 10px 20px;
+.container-registrasi {
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
+  width: 90%;
+}
+.card-registrasi {
+  border: 1px solid #eee;
+  box-shadow: 10px 10px 5px #ccd4cb;
+  height: 600px;
+  width: 550px;
+  margin-left: 400px;
+  margin-top: 100px;
+  border-radius: 15px;
+}
+
+.title-registrasi {
+  color: #57c957;
+  margin-right: 150px;
+  margin-bottom: 40px;
+}
+
+.card-email {
+  margin-top: 10px;
+}
+
+.title-email-password {
+  color: #818281;
+  margin-right: 350px;
+}
+
+.input-email {
+  background-color: #eef2ed;
+  width: 410px;
+  margin-right: 50px;
+  height: 47px;
+  font-size: 13px;
+  border: 0 solid white;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding-left: 20px;
+}
+
+.input-password {
+  background-color: #eef2ed;
+  width: 410px;
+  margin-right: 50px;
+  height: 47px;
+  font-size: 13px;
+  border: 0 solid white;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.btn {
+  background-color: #57c957;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border: 0 solid white;
+  font-size: 14px;
+  border: 40px;
+  margin-right: 350px;
+  border-radius: 30px;
   cursor: pointer;
-  border-radius: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-left: 22px;
-  box-shadow: 2px 2px 2px black;
 }
-
-select {
-  width: 20%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 15px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(10, 10, 10);
-  font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 2px 2px 2px black;
-}
-
-.container {
-  height: 100%;
-  background-color: #808080;
-  border-style: hidden;
-  border-radius: 15px;
-  padding: 18px;
-  text-align: center;
-  box-shadow: 0 8px 6px -6px black;
-}
-@media screen and (max-width: 900px) {
-  .main-contianer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-} */
