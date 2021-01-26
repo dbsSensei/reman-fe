@@ -1,16 +1,22 @@
 import './login.css';
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Login() {
-  const [value, setValue] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleClick = event => {
-    alert('login succes');
-    console.log(value);
-    console.log(password);
-    setValue('');
-    setPassword('');
+    axios
+      .post('http://sureface-natours.herokuapp.com/api/v1/users/login', {
+        email,
+        password,
+      })
+      .then(res => {
+        setEmail('');
+        setPassword('');
+        console.log(res);
+      });
     event.preventDefault();
   };
 
@@ -19,7 +25,7 @@ function Login() {
   };
 
   const handleUsername = event => {
-    setValue(event.target.value);
+    setEmail(event.target.value);
   };
   // console.log(value)
   // console.log(password)
@@ -35,7 +41,7 @@ function Login() {
               </div>
               <input
                 type="text"
-                value={value}
+                value={email}
                 onChange={handleUsername}
                 placeholder="        you@example.com"
                 className="input-email"

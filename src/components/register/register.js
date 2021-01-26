@@ -14,19 +14,24 @@ function Register() {
     // console.log(`email: ${email}`);
     // console.log(`Password: ${Pass}`);
     // console.log(`Confirm: ${Confirm}`);
-    axios.post('http://sureface-natours.herokuapp.com/api/v1/users/signup', {
-      name: name,
-      email: email,
-      password: Pass,
-      passwordConfirm: Confirm,
-    }).then(response => console.log(response));
+    axios
+      .post('http://sureface-natours.herokuapp.com/api/v1/users/signup', {
+        name: name,
+        email: email,
+        password: Pass,
+        passwordConfirm: Confirm,
+      })
+      .then(response => {
+        console.log(response);
 
-    setName('');
-    setEmail('');
-    setPass('');
-    setConfirm('');
+        setName('');
+        setEmail('');
+        setPass('');
+        setConfirm('');
+      });
+
     event.preventDefault();
-    alert('Registrasi succes');
+    // alert('Registrasi succes');
   };
 
   const nameHandler = event => {
