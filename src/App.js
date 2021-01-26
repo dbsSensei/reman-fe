@@ -1,12 +1,20 @@
 // import Dashboard from './containers/dashboard'
-import "./App.css";
-import Register from "./components/register/register";
+// import './App.css';
+// import Register from './components/register/register';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import Login from './components/login/login';
+import Dashbord from './containers/dashboard';
 
 function App() {
   console.log('rhoka');
   return (
-    <Register />
-    // <Dashboard />
+    <>
+      <Router>
+        <Route path="/" component={Dashbord} />
+        <Route path="/login" component={Login} />
+        {/* <Route path="/register" component={Register} /> */}
+      </Router>
+    </>
   );
 }
 
