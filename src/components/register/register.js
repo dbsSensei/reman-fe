@@ -1,171 +1,104 @@
-// import React, { useState } from "react";
-// import "./register.css";
+import './register.css';
+import React, { useState } from 'react';
 
-// function Register() {
-//   const [form, setForm] = useState({
-//     fullname: "",
-//     email: "",
-//     password: "",
-//     conrfim: "",
-//   });
+function Register() {
+  const [YourName, setYourName] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Pass, setPass] = useState('');
+  const [Confirm, setConfirm] = useState('');
 
-//   const onInputChange = (value, input) => {
-//     setForm({
-//       ...form,
-//       [input]: value,
-//     });
-//     console.log(form.fullname);
-//   };
-//   return (
-//     <div className="container">
-//       {/* <div className="body"> */}
-//       <h1 className="text registrasi">Registrasi</h1>
-//       <p className="text paragraf">
-//         Silahkan isi form dibawah untuk melakukan Registrasi!
-//       </p>
-//       <div className="formulir">
-//         <form>
-//           <input
-//             type="text"
-//             value={form.fullname}
-//             onChange={(value) => onInputChange(value, "fullname")}
-//             placeholder="Your Name"
-//           />
-//           <input
-//             type="text"
-//             value={form.email}
-//             onChange={(value) => onInputChange(value, "email")}
-//             placeholder="User Name"
-//           />
-//           <input
-//             type="password"
-//             value={form.password}
-//             onChange={(value) => onInputChange(value, "password")}
-//             placeholder="Password"
-//           />
-//           <input
-//             type="password"
-//             value={form.conrfim}
-//             onChange={(value) => onInputChange(value, "conrf    im")}
-//             placeholder="Confrim Password"
-//           />
-//         </form>
-//       </div>
-//       {/* </div> */}
-//     </div>
-//   );
-// }
-
-// export default Register;
-
-import React, { Component } from "react";
-import "./register.css";
-
-class Form extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      gender: "",
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  firsthandler = (event) => {
-    this.setState({
-      firstName: event.target.value,
-    });
-  };
-  lasthandler = (event) => {
-    this.setState({
-      lastName: event.target.value,
-    });
-  };
-  emailhandler = (event) => {
-    this.setState({
-      email: event.target.value,
-    });
-  };
-  passwordhandler = (event) => {
-    this.setState({
-      password: event.target.value,
-    });
-  };
-
-  genderhandler = (event) => {
-    this.setState({
-      gender: event.target.value,
-    });
-  };
-
-  handleSubmit = (event) => {
-    alert(
-      `${this.state.firstName} ${this.state.lastName} Registered Successfully !!!!`,
-    );
-    console.log(this.state);
-    this.setState({
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      gender: "",
-    });
+  const clickHandler = event => {
+    console.log(`YourName: ${YourName}`);
+    console.log(`Email: ${Email}`);
+    console.log(`Password: ${Pass}`);
+    console.log(`Confirm: ${Confirm}`);
+    setYourName('');
+    setEmail('');
+    setPass('');
+    setConfirm('');
     event.preventDefault();
+    alert('Registrasi succes');
   };
 
-  render() {
-    return (
-      <div className="container">
-        <form onSubmit={this.handleSubmit}>
-          <h1>User Registration</h1>
-          <label>FirstName :</label>{" "}
-          <input
-            type="text"
-            value={this.state.firstName}
-            onChange={this.firsthandler}
-            placeholder="FirstName..."
-          />
-          <br />
-          <label>LastName :</label>{" "}
-          <input
-            type="text"
-            value={this.state.lastName}
-            onChange={this.lasthandler}
-            placeholder="LastName..."
-          />
-          <br />
-          <label>YourEmail :</label>{" "}
-          <input
-            type="text"
-            value={this.state.email}
-            onChange={this.emailhandler}
-            placeholder="Email..."
-          />
-          <br />
-          <label>Password :</label>{" "}
-          <input
-            type="password"
-            value={this.state.password}
-            onChange={this.passwordhandler}
-            placeholder="Password..."
-          />
-          <br />
-          <label>Gender : </label>
-          <select onChange={this.genderhandler} defaultValue="Select Gender">
-            <option defaultValue>Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-          <br />
-          <input type="submit" value="Submit" />
-        </form>
+  const yourNameHandler = event => {
+    setYourName(event.target.value);
+  };
+
+  const emailHandler = event => {
+    setEmail(event.target.value);
+  };
+
+  const passwordHandler = event => {
+    setPass(event.target.value);
+  };
+
+  const confirmHandler = event => {
+    setConfirm(event.target.value);
+  };
+  // console.log(value)
+  // console.log(password)
+  return (
+    <section>
+      <div className="container-registrasi">
+        <div className="card-registrasi">
+          <h1 className="title-registrasi">CREATE YOUR ACCOUNT!</h1>
+          <form onSubmit={clickHandler}>
+            <div>
+              <div>
+                <p className="title-email-password">Your Name</p>
+              </div>
+              <input
+                type="text"
+                className="input-email"
+                placeholder="Your Name"
+                value={YourName}
+                onChange={yourNameHandler}
+              />
+            </div>
+            <div>
+              <div>
+                <p className="title-email-password">Email address</p>
+              </div>
+              <input
+                type="text"
+                className="input-email"
+                placeholder="     you@example.com"
+                value={Email}
+                onChange={emailHandler}
+              />
+            </div>
+            <div>
+              <div className="card-email-registrasi">
+                <p className="title-email-password">Password</p>
+              </div>
+              <input
+                type="password"
+                value={Pass}
+                onChange={passwordHandler}
+                placeholder="     • • • • • • • •"
+                className="input-password"
+              />
+            </div>
+            <div>
+              <div>
+                <p className="title-email-password">Confirm Password</p>
+              </div>
+              <input
+                type="password"
+                value={Confirm}
+                onChange={confirmHandler}
+                placeholder="     • • • • • • • •"
+                className="input-password"
+              />
+            </div>
+            <button type="submit" className="btn">
+              SIGNUP
+            </button>
+          </form>
+        </div>
       </div>
-    );
-  }
+    </section>
+  );
 }
 
-export default Form;
+export default Register;
