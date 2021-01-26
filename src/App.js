@@ -1,9 +1,12 @@
-import Dashboard from './containers/dashboard'
+// import Dashboard from './containers/dashboard'
 import "./App.css";
+import Register from "./components/register/register";
 
 function App() {
+  console.log('rhoka');
   return (
-    <Dashboard />
+    <Register />
+    // <Dashboard />
   );
 }
 
