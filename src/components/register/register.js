@@ -1,18 +1,27 @@
-import './register.css';
 import React, { useState } from 'react';
+import axios from 'axios';
+
+import './register.css';
 
 function Register() {
-  const [YourName, setYourName] = useState('');
-  const [Email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [Pass, setPass] = useState('');
   const [Confirm, setConfirm] = useState('');
 
   const clickHandler = event => {
-    console.log(`YourName: ${YourName}`);
-    console.log(`Email: ${Email}`);
-    console.log(`Password: ${Pass}`);
-    console.log(`Confirm: ${Confirm}`);
-    setYourName('');
+    // console.log(`name: ${name}`);
+    // console.log(`email: ${email}`);
+    // console.log(`Password: ${Pass}`);
+    // console.log(`Confirm: ${Confirm}`);
+    axios.post('http://sureface-natours.herokuapp.com/api/v1/users/signup', {
+      name: name,
+      email: email,
+      password: Pass,
+      passwordConfirm: Confirm,
+    }).then(response => console.log(response));
+
+    setName('');
     setEmail('');
     setPass('');
     setConfirm('');
@@ -20,8 +29,8 @@ function Register() {
     alert('Registrasi succes');
   };
 
-  const yourNameHandler = event => {
-    setYourName(event.target.value);
+  const nameHandler = event => {
+    setName(event.target.value);
   };
 
   const emailHandler = event => {
@@ -51,19 +60,19 @@ function Register() {
                 type="text"
                 className="input-email"
                 placeholder="Your Name"
-                value={YourName}
-                onChange={yourNameHandler}
+                value={name}
+                onChange={nameHandler}
               />
             </div>
             <div>
               <div>
-                <p className="title-email-password">Email address</p>
+                <p className="title-email-password">email address</p>
               </div>
               <input
                 type="text"
                 className="input-email"
                 placeholder="     you@example.com"
-                value={Email}
+                value={email}
                 onChange={emailHandler}
               />
             </div>
