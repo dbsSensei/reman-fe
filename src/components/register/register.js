@@ -6,32 +6,38 @@ import './register.css';
 function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [Pass, setPass] = useState('');
-  const [Confirm, setConfirm] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirm, setConfirmPassword] = useState('');
 
   const clickHandler = event => {
     // console.log(`name: ${name}`);
     // console.log(`email: ${email}`);
-    // console.log(`Password: ${Pass}`);
-    // console.log(`Confirm: ${Confirm}`);
-    axios
-      .post('http://sureface-natours.herokuapp.com/api/v1/users/signup', {
-        name: name,
-        email: email,
-        password: Pass,
-        passwordConfirm: Confirm,
-      })
-      .then(response => {
-        console.log(response);
+    // console.log(`Password: ${password}`);
+    // console.log(`Confirm: ${confirm}`);
+    if (password !== confirm) {
+      alert('Password Tidak Sama!');
+      // setConfirmPassword('');
+    } else {
+      axios
+        .post('http://sureface-natours.herokuapp.com/api/v1/users/signup', {
+          name: name,
+          email: email,
+          password: password,
+          passwordConfirm: confirm,
+        })
+        .then(response => {
+          console.log(response);
 
-        setName('');
-        setEmail('');
-        setPass('');
-        setConfirm('');
-      });
+          setName('');
+          setEmail('');
+          setPassword('');
+          setConfirmPassword('');
+        });
 
+      event.preventDefault();
+      // alert('Registrasi succes');
+    }
     event.preventDefault();
-    // alert('Registrasi succes');
   };
 
   const nameHandler = event => {
@@ -43,69 +49,61 @@ function Register() {
   };
 
   const passwordHandler = event => {
-    setPass(event.target.value);
+    setPassword(event.target.value);
   };
 
   const confirmHandler = event => {
-    setConfirm(event.target.value);
+    setConfirmPassword(event.target.value);
   };
   // console.log(value)
   // console.log(password)
   return (
     <section>
-      <div className="container-registrasi">
-        <div className="card-registrasi">
-          <h1 className="title-registrasi">CREATE YOUR ACCOUNT!</h1>
+      <div className="container-register">
+        <div className="card-register">
+          <h1 className="title-register">Create your account!</h1>
           <form onSubmit={clickHandler}>
-            <div>
-              <div>
-                <p className="title-email-password">Your Name</p>
-              </div>
+            <div className="form-your-name">
+              <p className="title-text">Your Name</p>
               <input
                 type="text"
-                className="input-email"
-                placeholder="Your Name"
+                className="input-form your-name"
+                placeholder="Your name"
                 value={name}
                 onChange={nameHandler}
               />
             </div>
-            <div>
-              <div>
-                <p className="title-email-password">email address</p>
-              </div>
+            <div className="form-email">
+              <p className="title-text">Email Address</p>
               <input
                 type="text"
-                className="input-email"
-                placeholder="     you@example.com"
+                className="input-form form-email"
+                placeholder="you@example.com"
                 value={email}
                 onChange={emailHandler}
               />
             </div>
-            <div>
-              <div className="card-email-registrasi">
-                <p className="title-email-password">Password</p>
-              </div>
+            <div className="form-password">
+              <p className="title-text">Password</p>
               <input
-                type="password"
-                value={Pass}
+                type="text"
+                className="input-form form-password"
+                placeholder="• • • • • • • •"
+                value={password}
                 onChange={passwordHandler}
-                placeholder="     • • • • • • • •"
-                className="input-password"
               />
             </div>
-            <div>
-              <div>
-                <p className="title-email-password">Confirm Password</p>
-              </div>
+            <div className="form-confirm-password">
+              <p className="title-text">Confirm Password</p>
               <input
-                type="password"
-                value={Confirm}
+                type="text"
+                className="input-form form-confirm-password"
+                placeholder="• • • • • • • •"
+                value={confirm}
                 onChange={confirmHandler}
-                placeholder="     • • • • • • • •"
-                className="input-password"
               />
             </div>
-            <button type="submit" className="btn">
+            <button type="submit" className="btn-register">
               SIGNUP
             </button>
           </form>
