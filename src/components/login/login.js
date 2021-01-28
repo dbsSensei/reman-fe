@@ -31,35 +31,31 @@ function Login() {
   // console.log(password)
   return (
     <section>
-      <div className="container">
-        <div className="card">
-          <h1 className="title">LOG INTO YOUR ACCOUNT</h1>
+      <div className="container-login">
+        <div className="card-login">
+          <h1 className="title-login">log into your account!</h1>
           <form onSubmit={handleClick}>
-            <div>
-              <div className="card-email">
-                <p className="title-email-password">Email address</p>
-              </div>
+            <div className="form-email">
+              <p className="text-title">Email Address</p>
               <input
                 type="text"
+                className="input-form form-email"
+                placeholder="you@example.com"
                 value={email}
                 onChange={handleUsername}
-                placeholder="        you@example.com"
-                className="input-email"
               />
             </div>
-            <div>
-              <div>
-                <p className="title-email-password">Password</p>
-              </div>
+            <div className="form-password">
+              <p className="text-title">Password</p>
               <input
-                type="password"
-                className="input-password"
-                placeholder="     • • • • • • • •"
+                type="text"
+                className="input-form form-password"
+                placeholder="• • • • • • • •"
                 value={password}
                 onChange={handlePassword}
               />
             </div>
-            <button type="submit" className="btn">
+            <button type="submit" className="btn-login">
               LOGIN
             </button>
           </form>
