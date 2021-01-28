@@ -68,7 +68,7 @@ function Register() {
               <input
                 type="text"
                 className="input-form your-name"
-                placeholder="Your name"
+                placeholder="your name"
                 value={name}
                 onChange={nameHandler}
               />
