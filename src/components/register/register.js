@@ -86,7 +86,7 @@ function Register() {
             <div className="form-password">
               <p className="title-text">Password</p>
               <input
-                type="text"
+                type="password"
                 className="input-form form-password"
                 placeholder="• • • • • • • •"
                 value={password}
@@ -96,7 +96,7 @@ function Register() {
             <div className="form-confirm-password">
               <p className="title-text">Confirm Password</p>
               <input
-                type="text"
+                type="password"
                 className="input-form form-confirm-password"
                 placeholder="• • • • • • • •"
                 value={confirm}

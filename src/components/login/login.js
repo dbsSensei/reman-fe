@@ -48,7 +48,7 @@ function Login() {
             <div className="form-password">
               <p className="text-title">Password</p>
               <input
-                type="text"
+                type="password"
                 className="input-form form-password"
                 placeholder="• • • • • • • •"
                 value={password}
