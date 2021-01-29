@@ -15,7 +15,7 @@ function Register() {
     // console.log(`Password: ${password}`);
     // console.log(`Confirm: ${confirm}`);
     if (password !== confirm) {
-      alert('Password Tidak Sama!');
+      alert('Password yang ada masukan tidak cocok!');
       // setConfirmPassword('');
     } else {
       axios
