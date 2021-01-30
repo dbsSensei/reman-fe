@@ -1,87 +1,83 @@
 .container-login {
   margin: 50px;
-  }
-  
-  .card-login {
-    margin: auto;
-    width: 450px;
-    height: 390px;
-    /* background-color: rgb(252, 211, 206); */
-    border: 1px solid #eee;
-    box-shadow: 10px 10px 5px #ccd4cb;
-    border-radius: 15px;
-    padding: 0 35px;
-  }
-  
-  .title-login {
-    text-transform: uppercase;
-    color: #57c957;
-    margin-bottom: 40px;
-  }
-  
-  .text-title {
-    font-size: 18px;
-    color: grey;
-  }
-  
-  .input-form {
-    width: 410px;
-    height: 47px;
-    background-color: #eef2ed;
-    border-radius: 8px;
-    padding-left: 20px;
-    border: none;
-    margin-bottom: 10px;
-    font-size: 17px;
-  }
-  
-  .btn-login {
-    background-color: #57c957;
-    color: white;
-    width: 100px;
-    height: 40px;
-    border: 0 solid white;
-    font-size: 14px;
-    border: 40px;
-    border-radius: 30px;
-    margin-top: 20px;
-    margin-left: 20px;
-    cursor: pointer;
+}
+
+.card-login {
+  margin: auto;
+  width: 500px;
+  height: 390px;
+  /* background-color: rgb(252, 211, 206); */
+  border: 1px solid #eee;
+  box-shadow: 10px 10px 5px #ccd4cb;
+  border-radius: 15px;
+  padding: 0 35px;
+}
+
+.title-login {
+  text-transform: uppercase;
+  color: #57c957;
+  margin-bottom: 40px;
+}
+
+.text-title {
+  font-size: 18px;
+  color: grey;
+}
+
+.input-form {
+  width: 410px;
+  height: 47px;
+  background-color: #eef2ed;
+  border-radius: 8px;
+  padding-left: 20px;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.btn-login {
+  background-color: #57c957;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border: 0 solid white;
+  font-size: 14px;
+  border: 40px;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .container-login {
+    display: grid;
+    justify-content: center;
   }
 
-  @media (max-width: 480px) {
-    .container-login {
-      display: grid;
-      justify-content: center;
-    }
-  
-    h1.title-login {
-      font-size: 18px;
-      margin-bottom: 32px;
-    }
-  
-    p.text-title {
-      font-size: 13px;
-    }
-  
-    .input-form {
-      width: 170px;
-      height: 20px;
-      font-size: 13px;
-    }
-  
-    .card-login {
-      padding: 0 15px;
-      width: 220px;
-      height: 290px;
-    }
-    .btn-login {
-      width: 80px;
-      height: 25px;
-      font-size: 13px;
-    }
+  h1.title-login {
+    font-size: 18px;
+    margin-bottom: 32px;
   }
-  
-  
-  
-  
+
+  p.text-title {
+    font-size: 13px;
+  }
+
+  .input-form {
+    width: 170px;
+    height: 20px;
+    font-size: 13px;
+  }
+
+  .card-login {
+    padding: 0 15px;
+    width: 220px;
+    height: 290px;
+  }
+  .btn-login {
+    width: 80px;
+    height: 25px;
+    font-size: 13px;
+  }
+}
