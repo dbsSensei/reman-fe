@@ -4,7 +4,11 @@ import Register from './components/register/register';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import Login from './components/login/login';
 import Dashbord from './containers/dashboard';
+<<<<<<< HEAD
 import Home from './pages/home';
+=======
+import './assets/scss/style.scss';
+>>>>>>> 27918fed316b879bd67dfaa160e7e896d85198c5
 
 function App() {
   console.log('rhoka');
