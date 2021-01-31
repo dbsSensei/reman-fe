@@ -1,58 +1,41 @@
-.container-registrasi {
-  text-align: center;
-  width: 90%;
-}
-.card-registrasi {
-  border: 1px solid #eee;
-  box-shadow: 10px 10px 5px #ccd4cb;
-  height: 600px;
-  width: 550px;
-  margin-left: 400px;
-  margin-top: 100px;
-  border-radius: 15px;
+.container-register {
+margin: 50px;
 }
 
-.title-registrasi {
+.card-register {
+  margin: auto;
+  width: 500px;
+  height: 620px;
+  /* background-color: rgb(252, 211, 206); */
+  border: 1px solid #eee;
+  box-shadow: 10px 10px 5px #ccd4cb;
+  border-radius: 15px;
+  padding: 0 35px;
+}
+
+.title-register {
+  text-transform: uppercase;
   color: #57c957;
-  margin-right: 150px;
   margin-bottom: 40px;
 }
 
-.card-email {
-  margin-top: 10px;
+.title-text {
+  font-size: 18px;
+  color: grey;
 }
 
-.title-email-password {
-  color: #818281;
-  margin-right: 350px;
-}
-
-.input-email {
-  background-color: #eef2ed;
+.input-form {
   width: 410px;
-  margin-right: 50px;
   height: 47px;
-  font-size: 13px;
-  border: 0 solid white;
+  background-color: #eef2ed;
+  border-radius: 8px;
+  padding-left: 20px;
+  border: none;
   margin-bottom: 10px;
-  border-radius: 8px;
-  padding-left: 20px;
+  font-size: 17px;
 }
 
-.input-password {
-  background-color: #eef2ed;
-  width: 410px;
-  margin-right: 50px;
-  height: 47px;
-  font-size: 13px;
-  border: 0 solid white;
-  margin-bottom: 30px;
-  border-radius: 8px;
-  font-weight: bold;
-  padding-left: 20px;
-}
-
-.btn {
+.btn-register {
   background-color: #57c957;
   color: white;
   width: 100px;
@@ -60,7 +43,43 @@
   border: 0 solid white;
   font-size: 14px;
   border: 40px;
-  margin-right: 350px;
   border-radius: 30px;
+  margin-top: 20px;
+  margin-left: 20px;
   cursor: pointer;
 }
+
+@media (max-width: 480px) {
+  .container-register {
+    display: grid;
+    justify-content: center;
+  }
+
+  h1.title-register {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  p.title-text {
+    font-size: 13px;
+  }
+
+  .input-form {
+    width: 170px;
+    height: 20px;
+    font-size: 13px;
+  }
+
+  .card-register {
+    padding: 0 15px;
+    width: 220px;
+    height: 420px;
+  }
+  .btn-register {
+    width: 80px;
+    height: 25px;
+    font-size: 13px;
+  }
+}
+
+

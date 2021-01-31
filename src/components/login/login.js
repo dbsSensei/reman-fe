@@ -1,16 +1,22 @@
 import './login.css';
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Login() {
-  const [value, setValue] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleClick = event => {
-    alert('login succes');
-    console.log(value);
-    console.log(password);
-    setValue('');
-    setPassword('');
+    axios
+      .post('http://sureface-natours.herokuapp.com/api/v1/users/login', {
+        email,
+        password,
+      })
+      .then(res => {
+        setEmail('');
+        setPassword('');
+        console.log(res);
+      });
     event.preventDefault();
   };
 
@@ -19,41 +25,37 @@ function Login() {
   };
 
   const handleUsername = event => {
-    setValue(event.target.value);
+    setEmail(event.target.value);
   };
   // console.log(value)
   // console.log(password)
   return (
     <section>
-      <div className="container">
-        <div className="card">
-          <h1 className="title">LOG INTO YOUR ACCOUNT</h1>
-          <form onSubmit={handleClick}>
-            <div>
-              <div className="card-email">
-                <p className="title-email-password">Email address</p>
-              </div>
+      <div className="container-login mt-5">
+        <div className="card-login">
+          <h1 className="title-login h3 mt-4">log into your account!</h1>
+          <form onSubmit={handleClick} className="mt-4">
+            <div className="form-email">
+              <p className="text-title">Email Address</p>
               <input
                 type="text"
-                value={value}
+                className="input-form form-email"
+                placeholder="you@example.com"
+                value={email}
                 onChange={handleUsername}
-                placeholder="        you@example.com"
-                className="input-email"
               />
             </div>
-            <div>
-              <div>
-                <p className="title-email-password">Password</p>
-              </div>
+            <div className="form-password">
+              <p className="text-title">Password</p>
               <input
                 type="password"
-                className="input-password"
-                placeholder="     • • • • • • • •"
+                className="input-form form-password"
+                placeholder="• • • • • • • •"
                 value={password}
                 onChange={handlePassword}
               />
             </div>
-            <button type="submit" className="btn">
+            <button type="submit" className="btn-login">
               LOGIN
             </button>
           </form>
