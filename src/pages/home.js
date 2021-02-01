@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  Redirect,
+} from 'react-router-dom';
 
 import './home.css';
 // import Navbar from '../parts/navbar';
