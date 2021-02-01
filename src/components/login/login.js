@@ -20,6 +20,7 @@ function Login(props) {
         <Redirect to="/home" />;
         console.log(res);
       });
+
     event.preventDefault();
   };
 
