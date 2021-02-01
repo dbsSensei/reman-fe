@@ -2,9 +2,9 @@ import React from 'react';
 
 function newEvents() {
   return (
-    <div>
-      <h1>ini adalah conten</h1>
-    </div>
+    <section>
+      <div className="h-500 m-50 bg-success">Hallo World</div>
+    </section>
   );
 }
 
