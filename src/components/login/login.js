@@ -35,10 +35,10 @@ function Login(props) {
   // console.log(password)
   return (
     <section>
-      <div className="container-login mt-5">
+      <div className="container-login">
         <div className="card-login">
-          <h1 className="title-login h3 mt-4">log into your account!</h1>
-          <form onSubmit={handleClick} className="mt-4">
+          <h1 className="title-login">log into your account!</h1>
+          <form onSubmit={handleClick}>
             <div className="form-email">
               <p className="text-title">Email Address</p>
               <input
