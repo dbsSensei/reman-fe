@@ -42,7 +42,7 @@ self.addEventListener('fetch', function (event) {
 });
 
 self.addEventListener('activate', function (event) {
-  var cacheAllowlist = ['pages-cache-v1', 'blog-posts-cache-v1'];
+  var cacheAllowlist = CACHE_NAME;
 
   event.waitUntil(
     caches.keys().then(function (cacheNames) {

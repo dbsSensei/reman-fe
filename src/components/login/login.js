@@ -1,9 +1,8 @@
 import './login.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
 
-function Login(props) {
+function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -16,8 +15,6 @@ function Login(props) {
       .then(res => {
         setEmail('');
         setPassword('');
-        props.setLoggedin(true);
-        <Redirect to="/home" />;
         console.log(res);
       });
 
