@@ -1,4 +1,4 @@
-var CACHE_NAME = 'Reman-cache-v1';
+var CACHE_NAME = 'Reman-cache-v2';
 var urlsToCache = ['/', '/index.html', '/offline.html'];
 
 self.addEventListener('install', function (event) {
