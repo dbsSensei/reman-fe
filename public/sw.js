@@ -1,11 +1,5 @@
 var CACHE_NAME = 'Reman-cache-v1';
-var urlsToCache = [
-  '/',
-  '/public/index.html',
-  '/src/app.js',
-  '/src/app.css',
-  '/offline.html',
-];
+var urlsToCache = ['/', '/index.html', '/offline.html'];
 
 self.addEventListener('install', function (event) {
   // Perform install steps
