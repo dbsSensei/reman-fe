@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-import './register.css';
+import './index.css';
 
 function Register() {
   const [name, setName] = useState('');
