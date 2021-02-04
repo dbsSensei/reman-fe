@@ -1,6 +1,6 @@
 import React from 'react';
 
-function newEvents() {
+function index() {
   return (
     <section>
       <div className="h-500 m-50 bg-success">Hallo World</div>
@@ -8,4 +8,4 @@ function newEvents() {
   );
 }
 
-export default newEvents;
+export default index;
