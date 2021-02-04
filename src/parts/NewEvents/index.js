@@ -2,9 +2,16 @@ import React from 'react';
 
 function newEvents() {
   return (
-    <section>
-      <div className="h-500 m-50 bg-success">Hallo World</div>
-    </section>
+    <div
+      style={{
+        marginLeft: 40,
+        backgroundColor: '#f5f5f5',
+        marginRight: 31,
+        height: 1000,
+      }}
+    >
+      <div>Hallo World</div>
+    </div>
   );
 }
 
