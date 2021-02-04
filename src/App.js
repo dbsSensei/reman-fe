@@ -1,11 +1,9 @@
-// import Dashboard from './containers/dashboard'
-// import './App.css';
 import React from 'react';
-
-import Register from './components/register/register';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Login from './components/login/login';
-import Home from './pages/home';
+import Login from './pages/LoginPage';
+import Register from './pages/RegisterPage';
+
+import Home from './pages/Home';
 
 function App() {
   console.log('rhoka');

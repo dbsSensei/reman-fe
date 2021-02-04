@@ -1,10 +1,10 @@
 .container-register {
-margin: 50px;
+  margin: 50px;
 }
 
 .card-register {
   margin: auto;
-  width: 500px;
+  width: 450px;
   height: 620px;
   /* background-color: rgb(252, 211, 206); */
   border: 1px solid #eee;
@@ -84,5 +84,3 @@ margin: 50px;
     font-size: 13px;
   }
 }
-
-
