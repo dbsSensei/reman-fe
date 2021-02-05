@@ -1,10 +1,11 @@
 import React from 'react';
+import './index.css';
 
 function index() {
   return (
-    <section>
-      <div className="h-500 m-50 bg-success">Hallo World</div>
-    </section>
+    <div className="card-container">
+      <div className="card">Welcome Home! </div>
+    </div>
   );
 }
 

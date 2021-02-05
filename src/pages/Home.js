@@ -8,8 +8,9 @@ function Home() {
     <div>
       <Navbar />
       {/* Taruh NewEvents di bungkus div  ini */}
-      <div></div>
-      <NewEvents />
+      <div>
+        <NewEvents />
+      </div>
     </div>
   );
 }
