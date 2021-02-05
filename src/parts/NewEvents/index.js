@@ -3,8 +3,8 @@ import './index.css';
 
 function index() {
   return (
-    <div className="card-container">
-      <div className="card">Welcome Home! </div>
+    <div>
+      <div className="card__newEvent">Welcome Home! </div>
     </div>
   );
 }

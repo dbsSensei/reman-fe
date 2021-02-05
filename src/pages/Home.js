@@ -2,15 +2,16 @@ import React from 'react';
 
 import Navbar from '../parts/Navbar/index';
 import NewEvents from '../parts/NewEvents/index';
+import Aux from 'components/Aux';
 
 function Home() {
   return (
     <div>
       <Navbar />
       {/* Taruh NewEvents di bungkus div  ini */}
-      <div>
+      <Aux>
         <NewEvents />
-      </div>
+      </Aux>
     </div>
   );
 }
