@@ -1,18 +1,12 @@
 import React from 'react';
+import './index.css';
 
-function newEvents() {
+function index() {
   return (
-    <div
-      style={{
-        marginLeft: 40,
-        backgroundColor: '#f5f5f5',
-        marginRight: 31,
-        height: 1000,
-      }}
-    >
-      <div>Hallo World</div>
+    <div className="card-container">
+      <div className="card">Welcome Home! </div>
     </div>
   );
 }
 
-export default newEvents;
+export default index;

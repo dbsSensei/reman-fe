@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Navbar from '../parts/Navbar';
-import NewEvents from '../parts/NewEvents';
+import Navbar from '../parts/Navbar/index';
+import NewEvents from '../parts/NewEvents/index';
 
 function Home() {
   return (
