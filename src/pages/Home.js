@@ -9,7 +9,7 @@ function Home() {
     <div>
       <Navbar />
       {/* Taruh NewEvents di bungkus div  ini */}
-      <Aux>
+      <Aux style={{ marginRight: 31, height: 1120 }}>
         <NewEvents />
       </Aux>
     </div>
