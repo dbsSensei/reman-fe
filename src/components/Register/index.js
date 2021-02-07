@@ -62,6 +62,7 @@ function Register() {
       <div className="container-register">
         <div className="card-register">
           <h1 className="title-register">Create your account!</h1>
+          <p className="title-text">Email Address</p>
           <form onSubmit={clickHandler}>
             <div className="form-your-name">
               <p className="title-text">Your Name</p>
@@ -74,7 +75,6 @@ function Register() {
               />
             </div>
             <div className="form-email">
-              <p className="title-text">Email Address</p>
               <input
                 type="text"
                 className="input-form form-email"
