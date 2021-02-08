@@ -1,52 +1,58 @@
 .container_profile {
-    display: flex;
-    flex-direction: row;
-    margin: 40px;
+  display: flex;
+  flex-direction: row;
+  margin: 40px;
 }
 
 .menu_sidebar {
-    width: 25%;
-    height: 1000px;
-    background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
+  width: 25%;
+  height: 1000px;
+  background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
 }
 
 .profile_area {
-    width: 75%;
-    height: 1000px;
-    background-color: white;
-    margin: 30px 0 0 200px ;
+  width: 75%;
+  height: 1000px;
+  background-color: white;
 }
 
 .main_menubar li a {
-    list-style: none;
-    text-decoration: none;
-    margin-bottom: 30px;
-    color: white;
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: 30px;
+  color: white;
 }
 
 .main_menubar li {
-    margin-left: 30px ;
-    margin-top: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .main_menubar {
-    /* list-style: none; */
-    text-transform: uppercase;
-    color: white;
-
+  list-style: none;
+  text-transform: uppercase;
+  color: white;
 }
 
 .color_h2_profile {
-    width: 395px;
-    height: 40px;
-    /* background-image: webkit-gradient( linear, left top, right top, from(#7dd56f), to(#28b487) ); */
-    background-image: linear-gradient(to right, #7dd56f, #28b487);
-    -webkit-background-clip: text;
+  width: 395px;
+  height: 40px;
+  /* background-image: webkit-gradient( linear, left top, right top, from(#7dd56f), to(#28b487) ); */
+  background-image: linear-gradient(to right, #7dd56f, #28b487);
+  -webkit-background-clip: text;
 }
 
 .setting_h2 {
-    text-transform: uppercase;
-    background: -webkit-linear-gradient(to right, #7dd56f, #28b487);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(to right, #7dd56f, #28b487);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.profile-card {
+  margin: 100px 0 0 120px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgb(204, 200, 200);
+  margin-top: 300px;
 }
