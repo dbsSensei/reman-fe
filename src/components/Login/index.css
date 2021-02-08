@@ -49,6 +49,11 @@
   margin-left: 20px;
   cursor: pointer;
 }
+.btn-login:hover {
+  transform: translateY(-2px);
+  text-shadow: 1rem 0.7rem 1rem white;
+  font-weight: bold;
+}
 
 @media (max-width: 480px) {
   .container-login {
@@ -80,5 +85,10 @@
     width: 80px;
     height: 25px;
     font-size: 13px;
+    margin-left: 0;
+  }
+  .btn-login:hover {
+    background-color: #a3fda3;
+    color: rgb(77, 75, 75);
   }
 }

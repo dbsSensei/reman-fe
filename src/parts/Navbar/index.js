@@ -13,7 +13,13 @@ export default function index() {
           </a>
         </nav>
         <div className="header__logo">
-          <img src={Logo} alt="logo" className="img-hero-header" />
+          <img
+            src={Logo}
+            alt="logo"
+            className="img-hero-header"
+            onClick={() => alert('Jangan diKlik..!!!')}
+            style={{ cursor: 'pointer' }}
+          />
         </div>
         <nav className="nav wrapper-nav-header">
           <button className="button-login-nav-header ">
