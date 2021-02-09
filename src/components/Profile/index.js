@@ -78,9 +78,30 @@ export default function Profile() {
               />
             </div>
           </form>
+          <div>
+            <img
+              src={People}
+              style={{
+                width: 130,
+                height: 130,
+                backgroundColor: '#808080',
+                marginTop: 40,
+                borderRadius: 20,
+                float: 'left',
+                marginRight: 30,
+              }}
+            />
+            <p
+              className="text_people_icon"
+              style={{ paddingTop: 80, cursor: 'pointer' }}
+              onClick={() => alert('Belum bisa... ngapain diklik')}
+            >
+              Choose New Photo
+            </p>
+            <hr />
+          </div>
         </div>
         <div className="border-bottom" />
-        
       </div>
     </div>
   );
