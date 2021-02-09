@@ -97,7 +97,7 @@ export default function Profile() {
               style={{ paddingTop: 80, cursor: 'pointer' }}
               onClick={() => alert('Belum bisa... ngapain diklik')}
             >
-              Choose new photo
+              Choose New Photo
             </p>
             <hr />
           </div>
