@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './index.css';
 import Star from '../../assets/image/star.svg';
 import Settings from '../../assets/image/settings.svg';
-import People from '../../assets/image/people.svg';
 
 export default function Profile() {
   const [name, setName] = useState('');
@@ -45,7 +44,7 @@ export default function Profile() {
                   marginRight: 10,
                 }}
               />
-              <a href="#">my reviews </a>
+              <>my reviews </>
             </p>
           </li>
         </ul>
@@ -79,30 +78,9 @@ export default function Profile() {
               />
             </div>
           </form>
-          <div>
-            <img
-              src={People}
-              style={{
-                width: 130,
-                height: 130,
-                backgroundColor: '#808080',
-                marginTop: 40,
-                borderRadius: 20,
-                float: 'left',
-                marginRight: 30,
-              }}
-            />
-            <p
-              className="text_people_icon"
-              style={{ paddingTop: 80, cursor: 'pointer' }}
-              onClick={() => alert('Belum bisa... ngapain diklik')}
-            >
-              Choose new photo
-            </p>
-            <hr />
-          </div>
         </div>
         <div className="border-bottom" />
+        
       </div>
     </div>
   );
