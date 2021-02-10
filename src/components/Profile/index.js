@@ -2,13 +2,39 @@ import React, { useState } from 'react';
 import './index.css';
 import Star from '../../assets/image/star.svg';
 import Settings from '../../assets/image/settings.svg';
+import People from '../../assets/image/people.svg';
 
 export default function Profile() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [newPassword, setNewPassword] = '';
+  const [confirmPassword, setConfrimPassword] = '';
+
+  const handleClickToApi = e => {
+    if (newPassword !== confirmPassword) {
+      alert('password tidak sama');
+    } else {
+      // axios post for api taruh di bawah ini untuk setel password
+      return console.log('succes');
+    }
+
+    e.preventDefault();
+  };
+
+  const handleNewPassword = e => {
+    setNewPassword(e.target.value);
+  };
+
+  const handleConfirm = e => {
+    setConfrimPassword(e.target.value);
+  };
 
   const nameHandler = event => {
     setName(event.target.value);
+  };
+
+  const handleClicklProfile = event => {
+    event.preventDefault();
   };
 
   const emailHandler = event => {
@@ -56,12 +82,12 @@ export default function Profile() {
               <h2>your account setting</h2>
             </div>
           </div>
-          <form onSubmit="">
+          <form onSubmit={handleClicklProfile}>
             <div className="form-your-name">
               <p className="title-text">Your Name</p>
               <input
                 type="text"
-                className="input-form your-name"
+                className="input-form form-email"
                 placeholder="your name"
                 value={name}
                 onChange={nameHandler}
@@ -77,31 +103,80 @@ export default function Profile() {
                 onChange={emailHandler}
               />
             </div>
+            <div>
+              <img
+                src={People}
+                style={{
+                  width: 80,
+                  height: 80,
+                  backgroundColor: '#808080',
+                  marginTop: 40,
+                  borderRadius: 20,
+                  float: 'left',
+                  marginRight: 30,
+                }}
+              />
+            </div>
+            <div className="card-text-people-icon">
+              <p
+                className="text_people_icon"
+                onClick={() => alert('Belum bisa... ngapain diklik')}
+              >
+                Choose New Photo
+              </p>
+            </div>
+            <div className="card-btn-save-settings">
+              <button type="submit" className="btn-save-settings">
+                SAVE SETTINGS
+              </button>
+            </div>
           </form>
-          <div>
-            <img
-              src={People}
-              style={{
-                width: 130,
-                height: 130,
-                backgroundColor: '#808080',
-                marginTop: 40,
-                borderRadius: 20,
-                float: 'left',
-                marginRight: 30,
-              }}
-            />
-            <p
-              className="text_people_icon"
-              style={{ paddingTop: 80, cursor: 'pointer' }}
-              onClick={() => alert('Belum bisa... ngapain diklik')}
-            >
-              Choose New Photo
-            </p>
-            <hr />
-          </div>
         </div>
         <div className="border-bottom" />
+        <div className="profile-card-password">
+          <div className="color_h2_profile">
+            <div className="setting_h2">
+              <h2>PASSWORD SETTINGS</h2>
+            </div>
+          </div>
+          <form onSubmit={handleClicklProfile}>
+            <div className="form-your-name">
+              <p className="title-text">Old Password</p>
+              <input
+                type="password"
+                className="input-form form-password"
+                placeholder="• • • • • • • •"
+                // value={name}
+                // onChange={nameHandler}
+              />
+            </div>
+            <div className="form-email">
+              <p className="title-text">New Password</p>
+              <input
+                type="password"
+                className="input-form form-password"
+                placeholder="• • • • • • • •"
+                value={newPassword}
+                onChange={setNewPassword}
+              />
+            </div>
+            <div className="form-email">
+              <p className="title-text">Confirm Password</p>
+              <input
+                type="password"
+                className="input-form form-password"
+                placeholder="• • • • • • • •"
+                value={confirmPassword}
+                onChange={handleConfirm}
+              />
+            </div>
+            <div className="card-btn-save-settings">
+              <button type="submit" className="btn-save-settings">
+                SAVE PASSOWRD
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

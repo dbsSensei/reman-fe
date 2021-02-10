@@ -8,7 +8,7 @@ export default function LoginPage() {
   return (
     <div>
       <Navbar />
-      <Aux>
+      <Aux style={{ height: 720 }}>
         <Login />
         <Footer />
       </Aux>
