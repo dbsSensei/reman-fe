@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../parts/Navbar/index';
 import Aux from 'components/Aux';
 import Profile from '../components/Profile/index';
+import Footer from '../parts/Footer/index';
 
 export default function ProfilePage() {
   return (
@@ -9,6 +10,7 @@ export default function ProfilePage() {
       <Navbar />
       <Aux>
         <Profile />
+        <Footer />
       </Aux>
     </div>
   );
