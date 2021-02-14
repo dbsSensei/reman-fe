@@ -4,12 +4,12 @@ import Login from '../components/Login';
 import Aux from 'components/Aux';
 import Footer from '../parts/Footer';
 
-export default function LoginPage() {
+export default function LoginPage({ setLogin }) {
   return (
     <div>
       <Navbar />
       <Aux style={{ height: 720 }}>
-        <Login />
+        <Login setLogin={setLogin} />
         <Footer />
       </Aux>
     </div>

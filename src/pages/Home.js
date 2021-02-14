@@ -3,10 +3,10 @@ import Navbar from '../parts/Navbar/index';
 import Aux from 'components/Aux';
 import NewEvents from '../parts/NewEvents/index';
 
-function Home() {
+function Home({ login }) {
   return (
     <div>
-      <Navbar />
+      <Navbar login={login} />
       {/* Taruh NewEvents di bungkus div  ini */}
       <Aux style={{ marginRight: 31, height: 1120 }}>
         <NewEvents />

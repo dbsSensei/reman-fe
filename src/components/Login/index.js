@@ -2,7 +2,7 @@ import './index.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function Login() {
+function Login({ setLogin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -16,6 +16,7 @@ function Login() {
         setEmail('');
         setPassword('');
         console.log(res);
+        setLogin(true);
       });
 
     event.preventDefault();
@@ -28,8 +29,6 @@ function Login() {
   const handleUsername = event => {
     setEmail(event.target.value);
   };
-  // console.log(value)
-  // console.log(password)
   return (
     <section>
       <div className="container-login">
