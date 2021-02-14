@@ -17,7 +17,7 @@ export default function index() {
             src={Logo}
             alt="logo"
             className="img-hero-header"
-            onClick={() => alert('Jangan diKlik..!!!')}
+            onClick={() => alert('ngapain luh click!!!!')}
             style={{ cursor: 'pointer' }}
           />
         </div>
