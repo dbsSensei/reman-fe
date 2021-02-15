@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './index.css';
 import Star from '../../assets/image/star.svg';
 import Settings from '../../assets/image/settings.svg';
@@ -9,6 +10,12 @@ export default function Profile() {
   const [email, setEmail] = useState('');
   const [newPassword, setNewPassword] = '';
   const [confirmPassword, setConfrimPassword] = '';
+
+  useEffect(() => {
+    axios
+      .get('https://jsonplaceholder.typicode.com/todos')
+      .then(res => console.log(res));
+  }, [0]);
 
   const handleClickToApi = e => {
     if (newPassword !== confirmPassword) {
@@ -31,10 +38,6 @@ export default function Profile() {
 
   const nameHandler = event => {
     setName(event.target.value);
-  };
-
-  const handleClicklProfile = event => {
-    event.preventDefault();
   };
 
   const emailHandler = event => {
@@ -82,7 +85,7 @@ export default function Profile() {
               <h2>your account setting</h2>
             </div>
           </div>
-          <form onSubmit={handleClicklProfile}>
+          <form onSubmit={handleClickToApi}>
             <div className="form-your-name">
               <p className="title-text">Your Name</p>
               <input
@@ -134,7 +137,7 @@ export default function Profile() {
               <h2>PASSWORD SETTINGS</h2>
             </div>
           </div>
-          <form onSubmit={handleClicklProfile}>
+          <form onSubmit={handleClickToApi}>
             <div className="form-your-name">
               <p className="title-text">Old Password</p>
               <input
@@ -152,7 +155,7 @@ export default function Profile() {
                 className="input-form form-password"
                 placeholder="• • • • • • • •"
                 value={newPassword}
-                onChange={setNewPassword}
+                onChange={handleNewPassword}
               />
             </div>
             <div className="form-email">
