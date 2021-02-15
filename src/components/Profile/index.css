@@ -84,10 +84,10 @@
 
 .card-text-people-icon {
   display: inline-block;
-  height: 40px;
+  height: 20px;
   margin-top: 50px;
   padding: 3px;
-  width: 155px;
+  width: 145px;
   /* background-color: red;  */
   border-bottom: 1px solid #55c57a;
 }
@@ -139,4 +139,23 @@
 ::selection {
   background-color: #55c57a;
   color: white;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Choose new photo';
+  padding: 20px 10px;
+  outline: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 50px;
+  color: #55c57a;
+}
+
+.custom-file-input:hover::before {
+  background-color: #55c57a ;
+  color: white  ;
 }
