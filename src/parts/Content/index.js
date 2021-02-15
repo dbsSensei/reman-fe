@@ -1,7 +1,13 @@
 import React from 'react';
 import './index.css';
+import { useHistory } from 'react-router-dom';
 
-function index() {
+function Index() {
+  const history = useHistory();
+  const handleOnClick = e => {
+    history.push('/details');
+    e.preventDefault();
+  };
   return (
     <div>
       {/* Acara Baru */}
@@ -21,7 +27,13 @@ function index() {
               <li className="point_1">Point 1</li>
               <li className="point_2">Point 2</li>
             </ul>
-            <button className="btn_content">Details</button>
+            <button
+              type="button"
+              className="btn_content"
+              onClik={handleOnClick}
+            >
+              Details
+            </button>
           </div>
 
           {/* Acara dua */}
@@ -37,7 +49,12 @@ function index() {
               <li className="point_1">Point 1</li>
               <li className="point_2">Point 2</li>
             </ul>
-            <button className="btn_content">Details</button>
+            <button
+              className="btn_content"
+              onClik={() => history.push('/details')}
+            >
+              Details
+            </button>
           </div>
 
           {/* Acara tiga */}
@@ -53,7 +70,12 @@ function index() {
               <li className="point_1">Point 1</li>
               <li className="point_2">Point 2</li>
             </ul>
-            <button className="btn_content">Details</button>
+            <button
+              className="btn_content"
+              onClik={() => history.push('/details')}
+            >
+              Details
+            </button>
           </div>
         </div>
       </div>
@@ -172,4 +194,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

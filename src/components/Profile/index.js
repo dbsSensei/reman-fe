@@ -121,12 +121,7 @@ export default function Profile() {
               />
             </div>
             <div className="card-text-people-icon">
-              <p
-                className="text_people_icon"
-                onClick={() => alert('Belum bisa... ngapain diklik')}
-              >
-                Choose New Photo
-              </p>
+              <input type="file" class="custom-file-input" />
             </div>
             <div className="card-btn-save-settings">
               <button type="submit" className="btn-save-settings">
