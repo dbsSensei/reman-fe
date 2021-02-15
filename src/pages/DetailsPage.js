@@ -1,14 +1,17 @@
 import React from 'react';
 import Navbar from '../parts/Navbar';
-import Register from '../components/Register';
 import Aux from '../components/Aux';
-export default function LoginPage() {
+import DetailsContent from '../parts/DetailsContent';
+
+const DetailsPgae = () => {
   return (
     <div>
       <Navbar />
       <Aux>
-        <Register />
+        <DetailsContent />
       </Aux>
     </div>
   );
-}
+};
+
+export default DetailsPgae;

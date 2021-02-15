@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../parts/Navbar/';
-import Aux from 'components/Aux';
+import Aux from '../components/Aux';
 import Content from '../parts/Content';
 import Footer from '../parts/Footer';
 
