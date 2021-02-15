@@ -1,11 +1,13 @@
 import './index.css';
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 function Login({ setLogin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const history = useHistory();
   const handleClick = event => {
     axios
       .post('http://sureface-natours.herokuapp.com/api/v1/users/login', {
@@ -17,6 +19,7 @@ function Login({ setLogin }) {
         setPassword('');
         console.log(res);
         setLogin(true);
+        history.push('/');
       });
 
     event.preventDefault();
@@ -29,6 +32,8 @@ function Login({ setLogin }) {
   const handleUsername = event => {
     setEmail(event.target.value);
   };
+
+  console.log(setLogin);
   return (
     <section>
       <div className="container-login">

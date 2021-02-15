@@ -5,6 +5,7 @@ import Content from '../parts/Content';
 import Footer from '../parts/Footer';
 
 function Home({ login }) {
+  console.log(login);
   return (
     <div>
       <Navbar login={login} />
