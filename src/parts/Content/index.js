@@ -1,13 +1,13 @@
 import React from 'react';
 import './index.css';
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Index() {
-  const history = useHistory();
-  const handleOnClick = e => {
-    history.push('/details');
-    e.preventDefault();
-  };
+  // const history = useHistory();
+  // const handleOnClick = e => {
+  //   history.push('/details');
+  //   e.preventDefault();
+  // };
   return (
     <div>
       {/* Acara Baru */}
@@ -27,13 +27,11 @@ function Index() {
               <li className="point_1">Point 1</li>
               <li className="point_2">Point 2</li>
             </ul>
-            <button
-              type="button"
-              className="btn_content"
-              onClik={handleOnClick}
-            >
-              Details
-            </button>
+            <Link to="/details">
+              <button type="button" className="btn_content">
+                Details
+              </button>
+            </Link>
           </div>
 
           {/* Acara dua */}
@@ -49,12 +47,9 @@ function Index() {
               <li className="point_1">Point 1</li>
               <li className="point_2">Point 2</li>
             </ul>
-            <button
-              className="btn_content"
-              onClik={() => history.push('/details')}
-            >
-              Details
-            </button>
+            <Link to="/details">
+              <button className="btn_content">Details</button>
+            </Link>
           </div>
 
           {/* Acara tiga */}
@@ -70,12 +65,9 @@ function Index() {
               <li className="point_1">Point 1</li>
               <li className="point_2">Point 2</li>
             </ul>
-            <button
-              className="btn_content"
-              onClik={() => history.push('/details')}
-            >
-              Details
-            </button>
+            <Link to="/details">
+              <button className="btn_content">Details</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -98,7 +90,9 @@ function Index() {
               <li className="point_1">Point 1</li>
               <li className="point_2">Point 2</li>
             </ul>
-            <button className="btn_content">Details</button>
+            <Link to="/details">
+              <button className="btn_content">Details</button>
+            </Link>
           </div>
 
           {/* Acara dua */}
@@ -114,7 +108,9 @@ function Index() {
               <li className="point_1">Point 1</li>
               <li className="point_2">Point 2</li>
             </ul>
-            <button className="btn_content">Details</button>
+            <Link to="/details">
+              <button className="btn_content">Details</button>
+            </Link>
           </div>
 
           {/* Acara tiga */}
@@ -130,7 +126,9 @@ function Index() {
               <li className="point_1">Point 1</li>
               <li className="point_2">Point 2</li>
             </ul>
-            <button className="btn_content">Details</button>
+            <Link to="/details">
+              <button className="btn_content">Details</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -153,7 +151,9 @@ function Index() {
               <li className="point_1">Point 1</li>
               <li className="point_2">Point 2</li>
             </ul>
-            <button className="btn_content">Details</button>
+            <Link to="/details">
+              <button className="btn_content">Details</button>
+            </Link>
           </div>
 
           {/* Acara dua */}
@@ -169,7 +169,9 @@ function Index() {
               <li className="point_1">Point 1</li>
               <li className="point_2">Point 2</li>
             </ul>
-            <button className="btn_content">Details</button>
+            <Link to="/details">
+              <button className="btn_content">Details</button>
+            </Link>
           </div>
 
           {/* Acara tiga */}
@@ -185,7 +187,9 @@ function Index() {
               <li className="point_1">Point 1</li>
               <li className="point_2">Point 2</li>
             </ul>
-            <button className="btn_content">Details</button>
+            <Link to="/details">
+              <button className="btn_content">Details</button>
+            </Link>
           </div>
         </div>
       </div>

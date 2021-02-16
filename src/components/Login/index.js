@@ -10,7 +10,7 @@ function Login({ setLogin }) {
   const history = useHistory();
   const handleClick = event => {
     axios
-      .post('http://sureface-natours.herokuapp.com/api/v1/users/login', {
+      .post('https://sureface-natours.herokuapp.com/api/v1/users/login', {
         email,
         password,
       })
