@@ -13,7 +13,7 @@ export default function Profile() {
 
   useEffect(() => {
     axios
-      .get('https://jsonplaceholder.typicode.com/todos')
+      .get('https://sureface-natours.herokuapp.com/api/v1/users/me')
       .then(res => console.log(res));
   }, [0]);
 
