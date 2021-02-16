@@ -13,7 +13,7 @@ export default function Profile() {
 
   useEffect(() => {
     axios
-      .get('https://sureface-natours.herokuapp.com/api/v1/users/me', {withCredentials:true})
+      .get('http://localhost:3001/api/v1/users/me', {withCredentials:true})
       .then(res => console.log(res));
   }, [0]);
 
