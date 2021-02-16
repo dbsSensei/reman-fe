@@ -19,7 +19,7 @@ function Login({ setLogin }) {
         setPassword('');
         console.log(res);
         setLogin(true);
-        history.push('/');
+        // history.push('/');
       });
 
     event.preventDefault();
