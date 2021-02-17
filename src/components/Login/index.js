@@ -2,6 +2,7 @@ import './index.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import Cookies from 'universal-cookie';
 
 function Login({ setLogin }) {
   const [email, setEmail] = useState('');
@@ -18,8 +19,16 @@ function Login({ setLogin }) {
         setEmail('');
         setPassword('');
         console.log(res);
+        console.log(res.cookies);
         setLogin(true);
+<<<<<<< HEAD
         history.push('/');
+=======
+        const cookies = new Cookies();
+        cookies.set('jwt', res.data.token, { path: '/' });
+        console.log(cookies.get('jwt'));
+        // history.push('/');
+>>>>>>> 8e0e211802ce38cf4bac7e31f6d14de082402944
       });
 
     event.preventDefault();
