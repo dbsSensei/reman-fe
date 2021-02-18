@@ -24,7 +24,7 @@ function Login({ setLogin }) {
         const cookies = new Cookies();
         cookies.set('jwt', res.data.token, { path: '/' });
         console.log(cookies.get('jwt'));
-        // history.push('/');
+        history.push('/');
       });
 
     event.preventDefault();
@@ -37,8 +37,6 @@ function Login({ setLogin }) {
   const handleUsername = event => {
     setEmail(event.target.value);
   };
-
-  console.log(setLogin);
   return (
     <section>
       <div className="container-login">
