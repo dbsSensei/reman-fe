@@ -19,7 +19,7 @@ function Register() {
       // setConfirmPassword('');
     } else {
       axios
-        .post('http://sureface-natours.herokuapp.com/api/v1/users/signup', {
+        .post('https://sureface-natours.herokuapp.com/api/v1/users/signup', {
           name: name,
           email: email,
           password: password,
