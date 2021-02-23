@@ -22,7 +22,9 @@ function App() {
         <Route exact path="/login">
           <Login setLogin={setLogin} />
         </Route>
-        <Route exact path="/profile" component={Profile} />
+        <Route exact path="/profile">
+          <Profile login={login} setLogin={setLogin} />
+        </Route>
         <Route exact path="/details" component={Details} />
       </Router>
     </>
