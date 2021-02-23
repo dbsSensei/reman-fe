@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import Cookies from 'universal-cookie';
+import Button from '../../parts/Button';
+import Input from '../../parts/Input';
 
 function Login({ setLogin }) {
   const [email, setEmail] = useState('');
@@ -43,29 +45,20 @@ function Login({ setLogin }) {
         <div className="card-login">
           <h1 className="title-login">log into your account!</h1>
           <form onSubmit={handleClick}>
-            <div className="form-email">
-              <p className="text-title">Email Address</p>
-              <input
-                type="text"
-                className="input-form form-email"
-                placeholder="you@example.com"
-                value={email}
-                onChange={handleUsername}
-              />
-            </div>
-            <div className="form-password">
-              <p className="text-title">Password</p>
-              <input
-                type="password"
-                className="input-form form-password"
-                placeholder="• • • • • • • •"
-                value={password}
-                onChange={handlePassword}
-              />
-            </div>
-            <button type="submit" className="btn-login">
-              LOGIN
-            </button>
+            <Input
+              onChange={handleUsername}
+              value={email}
+              placeholder="you@example.com"
+              inputEmailName
+              title="Email Adress"
+            />
+            <Input
+              onChange={handlePassword}
+              value={password}
+              title="Password"
+              inputPassword
+            />
+            <Button btnForLogin>Login</Button>
           </form>
         </div>
       </div>

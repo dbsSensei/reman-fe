@@ -3,6 +3,8 @@ import axios from 'axios';
 import Cookies from 'universal-cookie'
 
 import './index.css';
+import Button from '../../parts/Button';
+import Input from '../../parts/Input';
 import Star from '../../assets/image/star.svg';
 import Settings from '../../assets/image/settings.svg';
 import People from '../../assets/image/people.svg';
@@ -24,7 +26,7 @@ export default function Profile() {
         },
         withCredentials: true,
       })
-      .then(res => console.log(res));
+      .then(res => console.log(res.data));
   }, []);
 
   const handleClickToApi = e => {
@@ -60,33 +62,21 @@ export default function Profile() {
         <ul className="main_menubar">
           <li style={{ marginTop: 60 }}>
             <a href="/profile">
-              <img
-                src={Settings}
-                style={{
-                  width: 20,
-                  height: 20,
-                  float: 'left',
-                  marginRight: 10,
-                }}
-                alt="icon-settings"
-              />
-              <p>settings</p>
+              <div className="card-img-profile">
+                <img
+                  src={Settings}
+                  alt="icon-settings"
+                  className="img-profile"
+                />
+                <p className="text-img-profile">settings</p>
+              </div>
             </a>
           </li>
           <li>
-            <p>
-              <img
-                src={Star}
-                style={{
-                  width: 20,
-                  height: 20,
-                  float: 'left',
-                  marginRight: 10,
-                }}
-                alt="icon-reviews"
-              />
-              <>my reviews </>
-            </p>
+            <div>
+              <img src={Star} className="img-profile" alt="icon-reviews" />
+              <p className="text-img-profile-review">my reviews </p>
+            </div>
           </li>
         </ul>
       </div>
@@ -94,98 +84,66 @@ export default function Profile() {
         <div className="profile-card">
           <div className="color_h2_profile">
             <div className="setting_h2">
-              <h2>your account setting</h2>
+              <h2 className="title-profile">your account settings</h2>
             </div>
           </div>
           <form onSubmit={handleClickToApi}>
-            <div className="form-your-name">
-              <p className="title-text">Your Name</p>
-              <input
-                type="text"
-                className="input-form form-email"
-                placeholder="your name"
-                value={name}
-                onChange={nameHandler}
-              />
-            </div>
-            <div className="form-email">
-              <p className="title-text">Email Address</p>
-              <input
-                type="text"
-                className="input-form form-email"
-                placeholder="you@example.com"
-                value={email}
-                onChange={emailHandler}
-              />
-            </div>
+            <Input
+              title="Your Name"
+              placeholder="your name"
+              value={name}
+              onChange={nameHandler}
+              inputEmailName
+              className="profile-input"
+            />
+            <Input
+              title="Email Address"
+              placeholder="you@example.com"
+              value={email}
+              onChange={emailHandler}
+              inputEmailName
+              className="profile-input"
+            />
             <div>
               <img
+                className="img-default-profile"
                 src={People}
-                style={{
-                  width: 80,
-                  height: 80,
-                  backgroundColor: '#808080',
-                  marginTop: 40,
-                  borderRadius: 20,
-                  float: 'left',
-                  marginRight: 30,
-                }}
                 alt="icon-people"
               />
             </div>
-            <div className="card-text-people-icon">
-              <input type="file" class="custom-file-input" />
-            </div>
-            <div className="card-btn-save-settings">
-              <button type="submit" className="btn-save-settings">
-                SAVE SETTINGS
-              </button>
-            </div>
+            <Input />
+            <Button btnProfile>SAVE SETTINGS</Button>
           </form>
         </div>
         <div className="border-bottom" />
         <div className="profile-card-password">
           <div className="color_h2_profile">
             <div className="setting_h2">
-              <h2>PASSWORD SETTINGS</h2>
+              <h2 className="title-profile">PASSWORD SETTINGS</h2>
             </div>
           </div>
           <form onSubmit={handleClickToApi}>
-            <div className="form-your-name">
-              <p className="title-text">Old Password</p>
-              <input
-                type="password"
-                className="input-form form-password"
-                placeholder="• • • • • • • •"
-                // value={name}
-                // onChange={nameHandler}
-              />
-            </div>
-            <div className="form-email">
-              <p className="title-text">New Password</p>
-              <input
-                type="password"
-                className="input-form form-password"
-                placeholder="• • • • • • • •"
-                value={newPassword}
-                onChange={handleNewPassword}
-              />
-            </div>
-            <div className="form-email">
-              <p className="title-text">Confirm Password</p>
-              <input
-                type="password"
-                className="input-form form-password"
-                placeholder="• • • • • • • •"
-                value={confirmPassword}
-                onChange={handleConfirm}
-              />
-            </div>
-            <div className="card-btn-save-settings">
-              <button type="submit" className="btn-save-settings">
-                SAVE PASSOWRD
-              </button>
-            </div>
+            <Input
+              inputPassword
+              title="Old Password"
+              // onChange={}
+              // value={}
+            />
+            <Input
+              inputPassword
+              title="New Password"
+              value={newPassword}
+              onChange={handleNewPassword}
+            />
+            <Input
+              inputPassword
+              title="Confirm Password"
+              value={confirmPassword}
+              onChange={handleConfirm}
+            />
+            <Button btnProfile className="profile-btn-pass">
+              SAVE PASSWORD
+            </Button>
           </form>
         </div>
       </div>
