@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+// import axiosCookieJarSupport from 'axios-cookiejar-support';
+import tough from 'tough-cookie';
+import Cookies from 'universal-cookie'
+
 import './index.css';
 import Star from '../../assets/image/star.svg';
 import Settings from '../../assets/image/settings.svg';
 import People from '../../assets/image/people.svg';
+
 
 export default function Profile() {
   const [name, setName] = useState('');
@@ -12,8 +17,16 @@ export default function Profile() {
   const [confirmPassword, setConfrimPassword] = '';
 
   useEffect(() => {
+    const cookies = new Cookies();
+
+    // axiosCookieJarSupport(axios);
+    // const cookieJar = new tough.CookieJar();
+    console.log(cookies.get('jwt'))
     axios
-      .get('http://localhost:3001/api/v1/users/me', {
+      .get('https://sureface-natours.herokuapp.com/api/v1/users/me', {
+        headers:{
+          "Authorization" : `Bearer ${cookies.get('jwt')}`
+        },
         withCredentials: true,
       })
       .then(res => console.log(res));
