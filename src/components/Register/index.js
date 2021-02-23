@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import Button from '../../parts/Button';
 import './index.css';
+import Input from '../../parts/Input';
 
 function Register() {
   const [name, setName] = useState('');
@@ -59,49 +60,33 @@ function Register() {
         <div className="card-register">
           <h1 className="title-register">Create your account!</h1>
           <form onSubmit={clickHandler}>
-            <div className="form-your-name">
-              <p className="title-text">Your Name</p>
-              <input
-                type="text"
-                className="input-form your-name"
-                placeholder="your name"
-                value={name}
-                onChange={nameHandler}
-              />
-            </div>
-            <div className="form-email">
-              <p className="title-text">Email Address</p>
-              <input
-                type="text"
-                className="input-form form-email"
-                placeholder="you@example.com"
-                value={email}
-                onChange={emailHandler}
-              />
-            </div>
-            <div className="form-password">
-              <p className="title-text">Password</p>
-              <input
-                type="password"
-                className="input-form form-password"
-                placeholder="• • • • • • • •"
-                value={password}
-                onChange={passwordHandler}
-              />
-            </div>
-            <div className="form-confirm-password">
-              <p className="title-text">Confirm Password</p>
-              <input
-                type="password"
-                className="input-form form-confirm-password"
-                placeholder="• • • • • • • •"
-                value={confirm}
-                onChange={confirmHandler}
-              />
-            </div>
-            <button type="submit" className="btn-register">
-              SIGNUP
-            </button>
+            <Input
+              onChange={nameHandler}
+              value={name}
+              placeholder="your name"
+              inputEmailName
+              title="Your Name"
+            />
+            <Input
+              onChange={emailHandler}
+              value={email}
+              placeholder="you@example.com"
+              inputEmailName
+              title="Email Adress"
+            />
+            <Input
+              onChange={passwordHandler}
+              value={password}
+              inputPassword
+              title="Password"
+            />
+            <Input
+              onChange={confirmHandler}
+              value={confirm}
+              inputPassword
+              title="Confirm Password"
+            />
+            <Button btnForLogin>Sign Up</Button>
           </form>
         </div>
       </div>

@@ -22,18 +22,36 @@ export default function index({ login }) {
             style={{ cursor: 'pointer' }}
           />
         </div>
-        <nav className="nav wrapper-nav-header">
-          <button className="button-login-nav-header ">
-            <a href="/login" className="title-login-nav-header">
-              Log in
-            </a>
-          </button>
-          <button className="button-signup-nav-header">
-            <a href="/register" className="title-signup-nav-header">
-              Sign up
-            </a>
-          </button>
-        </nav>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            marginRight: 20,
+          }}
+        >
+          <nav className="nav wrapper-nav-header">
+            <button className="button-login-nav-header ">
+              <a
+                href="/login"
+                className="title-login-nav-header"
+                // style={{ float: 'right' }}
+              >
+                Log in
+              </a>
+            </button>
+          </nav>
+          <nav>
+            <button className="button-signup-nav-header">
+              <a
+                href="/register"
+                className="title-signup-nav-header"
+                // style={{ float: 'right' }}
+              >
+                Sign up
+              </a>
+            </button>
+          </nav>
+        </div>
       </header>
     </section>
   ) : (
@@ -53,18 +71,36 @@ export default function index({ login }) {
             style={{ cursor: 'pointer' }}
           />
         </div>
-        <nav className="nav wrapper-nav-header">
-          <button className="button-login-nav-header ">
-            <a href="/login" className="title-login-nav-header">
-              Log in
-            </a>
-          </button>
-          <button className="button-signup-nav-header">
-            <a href="/register" className="title-signup-nav-header">
-              Sign up
-            </a>
-          </button>
-        </nav>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            marginRight: 20,
+          }}
+        >
+          <nav className="nav wrapper-nav-header">
+            <button className="button-login-nav-header ">
+              <a
+                href="/login"
+                className="title-login-nav-header"
+                // style={{ float: 'right' }}
+              >
+                Log out
+              </a>
+            </button>
+          </nav>
+          <nav>
+            <button className="button-signup-nav-header">
+              <a
+                href="/profile"
+                className="title-signup-nav-header"
+                // style={{ float: 'right' }}
+              >
+                Me
+              </a>
+            </button>
+          </nav>
+        </div>
       </header>
     </section>
   );
