@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-// import axiosCookieJarSupport from 'axios-cookiejar-support';
-import tough from 'tough-cookie';
 import Cookies from 'universal-cookie'
 
 import './index.css';
@@ -19,9 +17,6 @@ export default function Profile() {
   useEffect(() => {
     const cookies = new Cookies();
 
-    // axiosCookieJarSupport(axios);
-    // const cookieJar = new tough.CookieJar();
-    console.log(cookies.get('jwt'))
     axios
       .get('https://sureface-natours.herokuapp.com/api/v1/users/me', {
         headers:{
