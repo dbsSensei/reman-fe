@@ -10,10 +10,6 @@ function Register() {
   const [confirm, setConfirmPassword] = useState('');
 
   const clickHandler = event => {
-    // console.log(`name: ${name}`);
-    // console.log(`email: ${email}`);
-    // console.log(`Password: ${password}`);
-    // console.log(`Confirm: ${confirm}`);
     if (password !== confirm) {
       alert('Password yang ada masukan tidak cocok!');
       // setConfirmPassword('');

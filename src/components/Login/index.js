@@ -14,7 +14,7 @@ function Login({ setLogin }) {
       .post('https://sureface-natours.herokuapp.com/api/v1/users/login', {
         email,
         password,
-      })
+      },{withCredentials:true})
       .then(res => {
         setEmail('');
         setPassword('');
@@ -24,7 +24,7 @@ function Login({ setLogin }) {
         const cookies = new Cookies();
         cookies.set('jwt', res.data.token, { path: '/' });
         console.log(cookies.get('jwt'));
-        // history.push('/');
+        history.push('/');
       });
 
     event.preventDefault();
@@ -37,8 +37,6 @@ function Login({ setLogin }) {
   const handleUsername = event => {
     setEmail(event.target.value);
   };
-
-  console.log(setLogin);
   return (
     <section>
       <div className="container-login">

@@ -50,7 +50,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .container-register {
     display: grid;
     justify-content: center;

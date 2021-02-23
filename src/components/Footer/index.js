@@ -1,5 +1,4 @@
 import React from 'react';
-import FooterReman from '../../assets/image/reman-footer-1.png';
 import FooterInstagram from '../../assets/image/instagram.svg';
 import FooterYoutube from '../../assets/image/youtube.svg';
 import FooterFacebook from '../../assets/image/facebook.svg';
@@ -11,7 +10,11 @@ export default function index() {
       <div>
         <div className="card-img-footer" style={{ textAlign: 'center' }}>
           <button className="btn-img-footer">
-            <a href="https://www.instagram.com/_mediareman/" target="_blank">
+            <a
+              href="https://www.instagram.com/_mediareman/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 className="sosmed-footer"
                 src={FooterInstagram}
@@ -23,6 +26,7 @@ export default function index() {
             <a
               href="https://youtube.com/channel/UC1yjX5RxGJuJ46ctFegLMJA"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 className="sosmed-footer"
@@ -32,11 +36,12 @@ export default function index() {
             </a>
           </button>
           <button className="btn-img-footer">
-            <a href="">
+            <a href="/">
               <img
                 className="sosmed-footer"
                 src={FooterFacebook}
                 alt="Logo-instagram"
+                rel="noreferrer"
               />
             </a>
           </button>

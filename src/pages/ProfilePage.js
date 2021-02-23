@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../parts/Navbar/index';
+import Navbar from '../components/Navbar/index';
 import Aux from '../components/Aux';
 import Profile from '../components/Profile';
-import Footer from '../parts/Footer/index';
+import Footer from '../components/Footer/index';
 
 export default function ProfilePage() {
   return (

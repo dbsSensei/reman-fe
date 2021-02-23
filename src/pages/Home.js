@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../parts/Navbar/';
+import Navbar from '../components/Navbar';
 import Aux from '../components/Aux';
-import Content from '../parts/Content';
-import Footer from '../parts/Footer';
+import Content from '../components/Content';
+import Footer from '../components/Footer';
 
 function Home({ login }) {
   console.log(login);

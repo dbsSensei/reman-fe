@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import axiosCookieJarSupport from 'axios-cookiejar-support';
+import tough from 'tough-cookie';
+
 import './index.css';
 import Star from '../../assets/image/star.svg';
 import Settings from '../../assets/image/settings.svg';
 import People from '../../assets/image/people.svg';
+
 
 export default function Profile() {
   const [name, setName] = useState('');
@@ -12,10 +16,16 @@ export default function Profile() {
   const [confirmPassword, setConfrimPassword] = '';
 
   useEffect(() => {
+    axiosCookieJarSupport.default(axios);
+    const cookieJar = new tough.CookieJar();
+
     axios
-      .get('https://sureface-natours.herokuapp.com/api/v1/users/me', {withCredentials:true})
+      .get('https://sureface-natours.herokuapp.com/api/v1/users/me', {
+        jar: cookieJar,
+        withCredentials: true,
+      })
       .then(res => console.log(res));
-  }, [0]);
+  }, []);
 
   const handleClickToApi = e => {
     if (newPassword !== confirmPassword) {
@@ -49,7 +59,7 @@ export default function Profile() {
       <div className="menu_sidebar">
         <ul className="main_menubar">
           <li style={{ marginTop: 60 }}>
-            <a href="#">
+            <a href="/profile">
               <img
                 src={Settings}
                 style={{
@@ -58,6 +68,7 @@ export default function Profile() {
                   float: 'left',
                   marginRight: 10,
                 }}
+                alt="icon-settings"
               />
               <p>settings</p>
             </a>
@@ -72,6 +83,7 @@ export default function Profile() {
                   float: 'left',
                   marginRight: 10,
                 }}
+                alt="icon-reviews"
               />
               <>my reviews </>
             </p>
@@ -118,6 +130,7 @@ export default function Profile() {
                   float: 'left',
                   marginRight: 30,
                 }}
+                alt="icon-people"
               />
             </div>
             <div className="card-text-people-icon">

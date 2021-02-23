@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../parts/Navbar';
+import Navbar from '../components/Navbar';
 import Aux from '../components/Aux';
-import DetailsContent from '../parts/DetailsContent';
+import DetailsContent from '../components/DetailsContent';
 
 const DetailsPgae = () => {
   return (
