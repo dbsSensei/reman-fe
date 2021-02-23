@@ -1,16 +1,30 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import './index.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function index(props) {
-  if (props.type === 'link') {
-    return <a href=""></a>;
+  if (props.btnForLogin) {
+    return (
+      <button type="submit" className="btn-login">
+        {props.children}
+      </button>
+    );
+  }
+
+  if (props.btnProfile) {
+    return (
+      <div className={['card-btn-save-settings', props.className].join(' ')}>
+        <button type="submit" className="btn-save-settings">
+          {props.children}
+        </button>
+      </div>
+    );
   }
 
   // if(props.type === '')
 
-  return <button></button>;
+  return <div></div>;
 }
 
 index.propTypes = {
