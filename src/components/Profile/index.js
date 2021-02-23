@@ -13,7 +13,9 @@ export default function Profile() {
 
   useEffect(() => {
     axios
-      .get('https://sureface-natours.herokuapp.com/api/v1/users/me', {withCredentials:true})
+      .get('https://reman.netlify.app/api/v1/users/me', {headers:{
+        Cookie:"cookie1=jwt"
+      }})
       .then(res => console.log(res));
   }, [0]);
 
