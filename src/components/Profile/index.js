@@ -16,7 +16,7 @@ export default function Profile() {
   const [confirmPassword, setConfrimPassword] = '';
 
   useEffect(() => {
-    axiosCookieJarSupport.default(axios);
+    axiosCookieJarSupport(axios);
     const cookieJar = new tough.CookieJar();
 
     axios
