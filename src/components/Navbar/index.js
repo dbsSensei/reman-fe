@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Logo from '../../assets/image/reman-logo.png';
-
+import Cookies from 'universal-cookie';
+import axios from 'axios';
 import './index.css';
 
-export default function index({ login }) {
+export default function Index({ login }) {
+  const [me, setMe] = useState('');
+  useEffect(() => {
+    const cookies = new Cookies();
+
+    axios
+      .get('https://sureface-natours.herokuapp.com/api/v1/users/me', {
+        headers: {
+          Authorization: `Bearer ${cookies.get('jwt')}`,
+        },
+        withCredentials: true,
+      })
+      .then(res => {
+        const name = res.data.data.data;
+        setMe(name.name);
+      });
+  }, []);
   // const [login, setLogin] = useState(false);
   return !login ? (
     <section>
@@ -96,7 +113,7 @@ export default function index({ login }) {
                 className="title-signup-nav-header"
                 // style={{ float: 'right' }}
               >
-                Me
+                {me}
               </a>
             </button>
           </nav>
