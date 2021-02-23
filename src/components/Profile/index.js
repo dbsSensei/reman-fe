@@ -13,9 +13,11 @@ export default function Profile() {
 
   useEffect(() => {
     axios
-      .get('https://sureface-natours.herokuapp.com/api/v1/users/me')
+      .get('http://localhost:3001/api/v1/users/me', {
+        withCredentials: true,
+      })
       .then(res => console.log(res));
-  }, [0]);
+  }, []);
 
   const handleClickToApi = e => {
     if (newPassword !== confirmPassword) {
@@ -49,7 +51,7 @@ export default function Profile() {
       <div className="menu_sidebar">
         <ul className="main_menubar">
           <li style={{ marginTop: 60 }}>
-            <a href="#">
+            <a href="/profile">
               <img
                 src={Settings}
                 style={{
@@ -58,6 +60,7 @@ export default function Profile() {
                   float: 'left',
                   marginRight: 10,
                 }}
+                alt="icon-settings"
               />
               <p>settings</p>
             </a>
@@ -72,6 +75,7 @@ export default function Profile() {
                   float: 'left',
                   marginRight: 10,
                 }}
+                alt="icon-reviews"
               />
               <>my reviews </>
             </p>
@@ -118,6 +122,7 @@ export default function Profile() {
                   float: 'left',
                   marginRight: 30,
                 }}
+                alt="icon-people"
               />
             </div>
             <div className="card-text-people-icon">

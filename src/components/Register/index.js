@@ -10,16 +10,12 @@ function Register() {
   const [confirm, setConfirmPassword] = useState('');
 
   const clickHandler = event => {
-    // console.log(`name: ${name}`);
-    // console.log(`email: ${email}`);
-    // console.log(`Password: ${password}`);
-    // console.log(`Confirm: ${confirm}`);
     if (password !== confirm) {
       alert('Password yang ada masukan tidak cocok!');
       // setConfirmPassword('');
     } else {
       axios
-        .post('https://sureface-natours.herokuapp.com/api/v1/users/signup', {
+        .post('http://localhost:3001/api/v1/users/signup', {
           name: name,
           email: email,
           password: password,

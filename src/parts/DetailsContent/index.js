@@ -7,6 +7,7 @@ const index = () => {
       <div className="banner">
         <h3>Benner Content</h3>
       </div>
+      <div></div>
     </div>
   );
 };
