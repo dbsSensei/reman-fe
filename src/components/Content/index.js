@@ -15,7 +15,7 @@ function Index() {
         <div className="lebel">Now Events</div>
         <div className="container__acara">
           {/* Acara satu */}
-          <div className="box_content">
+          <div className="box_1_content">
             <div className="foto_acara">Foto Acara</div>
             <h3 className="title_acara">Judul Acara</h3>
             <p className="descripsi_acara">
@@ -68,6 +68,7 @@ function Index() {
             <Link to="/details">
               <button className="btn_content">Details</button>
             </Link>
+            {/* <div style={{ height: 1000 }}>ppp</div> */}
           </div>
         </div>
       </div>
@@ -78,7 +79,7 @@ function Index() {
         <div className="lebel">Next Events</div>
         <div className="container__acara">
           {/* Acara satu */}
-          <div className="box_content">
+          <div className="box_1_content">
             <div className="foto_acara">Foto Acara</div>
             <h3 className="title_acara">Judul Acara</h3>
             <p className="descripsi_acara">
@@ -139,7 +140,7 @@ function Index() {
         <div className="lebel">Past Events</div>
         <div className="container__acara">
           {/* Acara satu */}
-          <div className="box_content">
+          <div className="box_1_content">
             <div className="foto_acara">Foto Acara</div>
             <h3 className="title_acara">Judul Acara</h3>
             <p className="descripsi_acara">

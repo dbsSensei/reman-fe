@@ -9,11 +9,12 @@ import Star from '../../assets/image/star.svg';
 import Settings from '../../assets/image/settings.svg';
 import People from '../../assets/image/people.svg';
 
-export default function Profile() {
+export default function Profile({ setLogin }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [newPassword, setNewPassword] = '';
-  const [confirmPassword, setConfrimPassword] = '';
+  const [oldPassword, setOldPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfrimPassword] = useState('');
 
   useEffect(() => {
     const cookies = new Cookies();
@@ -30,15 +31,53 @@ export default function Profile() {
         setName(name);
         setEmail(email);
       });
+    setLogin(true);
   }, []);
 
-  const handleClickToApi = e => {
-    if (newPassword !== confirmPassword) {
-      alert('password tidak sama');
-    } else {
-      // axios post for api taruh di bawah ini untuk setel password
-      return console.log('succes');
-    }
+  const handleClickUpdateUsername = e => {
+    const cookies = new Cookies();
+    axios
+      .patch(
+        'https://sureface-natours.herokuapp.com/api/v1/users/updateMe',
+        {
+          name: name,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${cookies.get('jwt')}`,
+          },
+          withCredentials: true,
+        }
+      )
+      .then(res => {
+        console.log(res);
+      });
+    e.preventDefault();
+  };
+
+  const handleClickUpdatePassword = e => {
+    const cookies = new Cookies();
+    axios
+      .patch(
+        'https://sureface-natours.herokuapp.com/api/v1/users/updateMyPassword',
+        {
+          passwordCurrent: oldPassword,
+          password: newPassword,
+          passwordConfirm: confirmPassword,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${cookies.get('jwt')}`,
+          },
+          withCredentials: true,
+        }
+      )
+      .then(res => {
+        console.log(res);
+        setOldPassword('');
+        setNewPassword('');
+        setConfrimPassword('');
+      });
 
     e.preventDefault();
   };
@@ -57,6 +96,10 @@ export default function Profile() {
 
   const emailHandler = event => {
     setEmail(event.target.value);
+  };
+
+  const handleOldPassword = event => {
+    setOldPassword(event.target.value);
   };
 
   return (
@@ -90,7 +133,7 @@ export default function Profile() {
               <h2 className="title-profile">your account settings</h2>
             </div>
           </div>
-          <form onSubmit={handleClickToApi}>
+          <form onSubmit={handleClickUpdateUsername}>
             <Input
               title="Your Name"
               placeholder="your name"
@@ -125,12 +168,12 @@ export default function Profile() {
               <h2 className="title-profile">PASSWORD SETTINGS</h2>
             </div>
           </div>
-          <form onSubmit={handleClickToApi}>
+          <form onSubmit={handleClickUpdatePassword}>
             <Input
               inputPassword
               title="Old Password"
-              // onChange={}
-              // value={}
+              value={oldPassword}
+              onChange={handleOldPassword}
             />
             <Input
               inputPassword

@@ -9,7 +9,7 @@
 .container__acara {
   display: flex;
   flex-direction: row;
-
+  justify-content: center;
 }
 
 .box_content {
@@ -20,7 +20,16 @@
   border-radius: 8px;
   margin-top: 50px;
   box-shadow: 10px 10px 5px #808080;
+}
 
+.box_1_content {
+  width: 270px;
+  height: 470px;
+  background-color: #00acfc;
+  margin-left: 0;
+  border-radius: 8px;
+  margin-top: 50px;
+  box-shadow: 10px 10px 5px #808080;
 }
 
 .foto_acara {
@@ -71,4 +80,39 @@
   flex-direction: row;
   justify-content: space-between;
   margin-right: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+  .container__acara {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card__newEvent {
+    width: auto;
+    height: auto;
+    background-color:white;
+    border-radius: 15px;
+    margin: 10px 30px 40px 30px;
+  }
+
+  .box_1_content {
+    width: 270px;
+    height: 470px;
+    background-color: #00acfc;
+    margin-left: 0;
+    border-radius: 8px;
+    margin: 50px auto;
+    box-shadow: 10px 10px 5px #808080;
+  }
+
+  .box_content {
+    width: 270px;
+    height: 470px;
+    background-color: #00acfc;
+    margin-left: 0;
+    border-radius: 8px;
+    margin: 50px auto;
+    box-shadow: 10px 10px 5px #808080;
+  }
 }
