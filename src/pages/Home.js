@@ -10,7 +10,7 @@ function Home({ login }) {
     <div>
       <Navbar login={login} />
       {/* Taruh NewEvents di bungkus div  ini */}
-      <Aux style={{ marginRight: 31, height: 2350 }}>
+      <Aux style={{ marginRight: 31, height: 'auto' }}>
         <Content />
         <Footer />
       </Aux>
