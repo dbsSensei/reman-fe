@@ -6,30 +6,49 @@
     /* transform: rotate(-1deg); */
 /* } */
 
+.wrapper_content_details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .sidebar {
-    float: left;
-    width: 50%;
-    background-color: #f7f7f7;
+    padding-top : 100px;
+    flex: 1;
+    background-color: #eeffe9;
     height: 500px;
-    text-align: center;
+    text-align: center; 
+    padding-top : 10vh;
+    clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 100%);
+    margin-top : 50px;
+
 
 }
 
 .about {
-    float: right;
+    padding-top : 120px;
+    flex: 1;
     background-color: #fff;
     height: 500px;
     text-align: center;
-
-
+    clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 100%);
 }
 
 .banner {
     height: 80vh;
+    background-color: #fff;
     background-image: url(../../assets/image/hero.jpg);
     background-size: cover;
 
     clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
 }
 
+.color_h2_details_profile {
+    width: auto;
+    height: auto;
+    /* background-image: webkit-gradient( linear, left top, right top, from(#7dd56f), to(#28b487) ); */
+    background-image: linear-gradient(to right, #7dd56f, #28b487);
+    -webkit-background-clip: text;
+}
+  
 

@@ -1,6 +1,9 @@
 import React from 'react';
 import './index.css';
 import { Link } from 'react-router-dom';
+import Foto_acara from '../../assets/image/foto-acara.jpg';
+import Lock from '../../assets/image/lock.svg';
+import Shield from '../../assets/image/shield.svg';
 
 function Index() {
   // const history = useHistory();
@@ -16,7 +19,9 @@ function Index() {
         <div className="container__acara">
           {/* Acara satu */}
           <div className="box_1_content">
-            <div className="foto_acara">Foto Acara</div>
+            <div className="foto_acara">
+              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
+            </div>
             <h3 className="title_acara">Judul Acara</h3>
             <p className="descripsi_acara">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
@@ -36,7 +41,9 @@ function Index() {
 
           {/* Acara dua */}
           <div className="box_content">
-            <div className="foto_acara">Foto Acara</div>
+            <div className="foto_acara">
+              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
+            </div>
             <h3 className="title_acara">Judul Acara</h3>
             <p className="descripsi_acara">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
@@ -54,7 +61,9 @@ function Index() {
 
           {/* Acara tiga */}
           <div className="box_content">
-            <div className="foto_acara">Foto Acara</div>
+            <div className="foto_acara">
+              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
+            </div>
             <h3 className="title_acara">Judul Acara</h3>
             <p className="descripsi_acara">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
@@ -80,7 +89,11 @@ function Index() {
         <div className="container__acara">
           {/* Acara satu */}
           <div className="box_1_content">
-            <div className="foto_acara">Foto Acara</div>
+            <div className="foto_acara">
+              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
+              <div className="gradient"></div>
+              <img className="icon" src={Lock} alt="icon" />
+            </div>
             <h3 className="title_acara">Judul Acara</h3>
             <p className="descripsi_acara">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
@@ -98,7 +111,11 @@ function Index() {
 
           {/* Acara dua */}
           <div className="box_content">
-            <div className="foto_acara">Foto Acara</div>
+            <div className="foto_acara">
+              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
+              <div className="gradient"></div>
+              <img className="icon" src={Lock} alt="icon" />
+            </div>
             <h3 className="title_acara">Judul Acara</h3>
             <p className="descripsi_acara">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
@@ -116,7 +133,11 @@ function Index() {
 
           {/* Acara tiga */}
           <div className="box_content">
-            <div className="foto_acara">Foto Acara</div>
+            <div className="foto_acara">
+              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
+              <div className="gradient"></div>
+              <img className="icon" src={Lock} alt="icon" />
+            </div>
             <h3 className="title_acara">Judul Acara</h3>
             <p className="descripsi_acara">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
@@ -141,7 +162,11 @@ function Index() {
         <div className="container__acara">
           {/* Acara satu */}
           <div className="box_1_content">
-            <div className="foto_acara">Foto Acara</div>
+            <div className="foto_acara">
+              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
+              <div className="gradient_red"></div>
+              <img className="icon" src={Shield} alt="icon" />
+            </div>
             <h3 className="title_acara">Judul Acara</h3>
             <p className="descripsi_acara">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
@@ -159,7 +184,11 @@ function Index() {
 
           {/* Acara dua */}
           <div className="box_content">
-            <div className="foto_acara">Foto Acara</div>
+            <div className="foto_acara">
+              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
+              <div className="gradient_red"></div>
+              <img className="icon" src={Shield} alt="icon" />
+            </div>
             <h3 className="title_acara">Judul Acara</h3>
             <p className="descripsi_acara">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
@@ -177,7 +206,11 @@ function Index() {
 
           {/* Acara tiga */}
           <div className="box_content">
-            <div className="foto_acara">Foto Acara</div>
+            <div className="foto_acara">
+              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
+              <div className="gradient_red"></div>
+              <img className="icon" src={Shield} alt="icon" />
+            </div>
             <h3 className="title_acara">Judul Acara</h3>
             <p className="descripsi_acara">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
