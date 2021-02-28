@@ -4,12 +4,16 @@ import Login from '../components/Login';
 import Aux from '../components/Aux';
 import Footer from '../components/Footer';
 
-export default function LoginPage({ setLogin }) {
+export default function LoginPage({ setLogin, animation, setAnimation }) {
   return (
     <div>
       <Navbar />
       <Aux style={{ height: 720 }}>
-        <Login setLogin={setLogin} />
+        <Login
+          setLogin={setLogin}
+          animation={animation}
+          setAnimation={setAnimation}
+        />
         <Footer />
       </Aux>
     </div>

@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
 import { Link } from 'react-router-dom';
 import Foto_acara from '../../assets/image/foto-acara.jpg';
 import Lock from '../../assets/image/lock.svg';
 import Shield from '../../assets/image/shield.svg';
 
-function Index() {
-  // const history = useHistory();
-  // const handleOnClick = e => {
-  //   history.push('/details');
-  //   e.preventDefault();
-  // };
+function Index({ setLogin }) {
+  useEffect(() => {
+    setLogin(true);
+  }, []);
   return (
     <div>
       {/* Acara Baru */}

@@ -1,17 +1,19 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 import Aux from '../components/Aux';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import DetailsContent from '../components/DetailsContent';
 
-const DetailsPgae = () => {
+const DetailsPage = ({ login, setLogin }) => {
   return (
     <div>
-      <Navbar />
+      <Navbar login={login} />
       <Aux>
-        <DetailsContent />
+        <DetailsContent setLogin={setLogin} />
+        <Footer />
       </Aux>
     </div>
   );
 };
 
-export default DetailsPgae;
+export default DetailsPage;
