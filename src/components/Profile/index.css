@@ -148,16 +148,6 @@
   margin: 40px 0 0 300px;
 }
 
-.speaker {
-  display: flex;
-  flex-direction: row;
-}
-
-.img_speaker {
-  width: 70px;
-}
-
-
 
 @media only screen and (max-width: 480px) {
   .menu_sidebar {

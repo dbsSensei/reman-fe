@@ -52,6 +52,9 @@
   text-shadow: 0 0.7rem 1rem black;
 }
 
+.img-foto-profile-navbar {
+  margin: 15px 10px 0 0;
+}
 .title-nav-header {
   font-size: 30px;
   color: #f7f7f7;
@@ -87,11 +90,9 @@
   cursor: pointer;
   font-family: inherit;
   text-decoration: none;
-
-  /* float: right; */
 }
 
-.smiles{
+.smiles {
   align-items: center;
   margin-right: 10px;
 }

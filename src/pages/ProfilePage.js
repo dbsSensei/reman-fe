@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/Navbar/index';
+import Navbar from '../components/Navbar';
 import Aux from '../components/Aux';
 import Profile from '../components/Profile';
 import Footer from '../components/Footer/index';

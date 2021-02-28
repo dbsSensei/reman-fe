@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
 import calendar from '../../assets/image/calendar.svg';
 import payment from '../../assets/image/payment.svg';
@@ -10,7 +10,11 @@ import maps from '../../assets/image/maps.png';
 import akatsuki from '../../assets/image/Akatsuki.jpg';
 import konoha from '../../assets/image/konoha.jpg';
 
-const index = () => {
+const Index = ({ setLogin }) => {
+  useEffect(() => {
+    setLogin(true);
+  }, []);
+
   return (
     <div className="details_wrapper">
       <div className="banner">
@@ -187,4 +191,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
