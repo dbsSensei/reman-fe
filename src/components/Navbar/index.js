@@ -3,6 +3,7 @@ import Logo from '../../assets/image/reman-logo.png';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 import './index.css';
+import smiles from '../../assets/image/smiles.svg';
 
 export default function Index({ login }) {
   const [me, setMe] = useState('');
