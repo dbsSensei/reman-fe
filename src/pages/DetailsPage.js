@@ -1,9 +1,10 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 import Aux from '../components/Aux';
+import Navbar from '../components/Navbar';
+
 import DetailsContent from '../components/DetailsContent';
 
-const DetailsPgae = () => {
+const DetailsPage = () => {
   return (
     <div>
       <Navbar />
@@ -14,4 +15,4 @@ const DetailsPgae = () => {
   );
 };
 
-export default DetailsPgae;
+export default DetailsPage;

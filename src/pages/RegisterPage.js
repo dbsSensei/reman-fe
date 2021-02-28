@@ -4,12 +4,12 @@ import Register from '../components/Register';
 import Aux from '../components/Aux';
 import Footer from '../components/Footer';
 
-export default function LoginPage() {
+export default function RegisterPage({ animation, setAnimation }) {
   return (
     <div>
       <Navbar />
       <Aux>
-        <Register />
+        <Register animation={animation} setAnimation={setAnimation} />
         <Footer />
       </Aux>
     </div>

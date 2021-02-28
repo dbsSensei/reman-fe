@@ -5,11 +5,13 @@ import Register from './pages/RegisterPage';
 import Profile from './pages/ProfilePage';
 import Details from './pages/DetailsPage';
 import Aux from 'components/Aux';
-
 import Home from './pages/Home';
+import Spinners from './parts/Animation/Spinners';
 
 function App() {
   const [login, setLogin] = useState(false);
+  const [animation, setAnimation] = useState(true);
+
   console.log('rhoka');
   return (
     <>
@@ -18,14 +20,21 @@ function App() {
           <Home login={login} />
         </Route>
         <Route exact path="/aux" component={Aux} />
-        <Route exact path="/register" component={Register} />
+        <Route exact path="/register">
+          <Register animation={animation} setAnimation={setAnimation} />
+        </Route>
         <Route exact path="/login">
-          <Login setLogin={setLogin} />
+          <Login
+            setLogin={setLogin}
+            animation={animation}
+            setAnimation={setAnimation}
+          />
         </Route>
         <Route exact path="/profile">
           <Profile login={login} setLogin={setLogin} />
         </Route>
         <Route exact path="/details" component={Details} />
+        <Route exact path="/spinners" component={Spinners} />
       </Router>
     </>
   );

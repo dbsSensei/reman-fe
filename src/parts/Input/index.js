@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import Warning from '../Warning';
 
 export default function index(props) {
   if (props.inputEmailName) {
@@ -21,6 +22,11 @@ export default function index(props) {
     return (
       <div className="form-password">
         <p className="text-title">{props.title}</p>
+        {props.value.length !== 0 && props.value.length < 6 ? (
+          <Warning warningPassword />
+        ) : (
+          ''
+        )}
         <input
           type="password"
           className="input-form-1 form-password"

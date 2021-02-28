@@ -21,7 +21,6 @@ export default function Index({ login }) {
         setMe(name.name);
       });
   }, []);
-  // const [login, setLogin] = useState(false);
   return !login ? (
     <section>
       <header className="header">
@@ -48,11 +47,7 @@ export default function Index({ login }) {
         >
           <nav className="nav wrapper-nav-header">
             <button className="button-login-nav-header ">
-              <a
-                href="/login"
-                className="title-login-nav-header"
-                // style={{ float: 'right' }}
-              >
+              <a href="/login" className="title-login-nav-header">
                 Log in
               </a>
             </button>
@@ -108,11 +103,7 @@ export default function Index({ login }) {
           </nav>
           <nav>
             <button className="button-signup-nav-header">
-              <a
-                href="/profile"
-                className="title-signup-nav-header"
-                // style={{ float: 'right' }}
-              >
+              <a href="/profile" className="title-signup-nav-header">
                 {me}
               </a>
             </button>

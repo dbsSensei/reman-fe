@@ -5,18 +5,24 @@ import { useHistory } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import Button from '../../parts/Button';
 import Input from '../../parts/Input';
+import Spinners from '../../parts/Animation/Spinners';
 
-function Login({ setLogin }) {
+function Login({ setLogin, animation, setAnimation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
   const history = useHistory();
+  console.log(animation);
   const handleClick = event => {
+    setAnimation(false);
     axios
-      .post('https://sureface-natours.herokuapp.com/api/v1/users/login', {
-        email,
-        password,
-      },{withCredentials:true})
+      .post(
+        'https://sureface-natours.herokuapp.com/api/v1/users/login',
+        {
+          email,
+          password,
+        },
+        { withCredentials: true }
+      )
       .then(res => {
         setEmail('');
         setPassword('');
@@ -42,25 +48,35 @@ function Login({ setLogin }) {
   return (
     <section>
       <div className="container-login">
-        <div className="card-login">
-          <h1 className="title-login">log into your account!</h1>
-          <form onSubmit={handleClick}>
-            <Input
-              onChange={handleUsername}
-              value={email}
-              placeholder="you@example.com"
-              inputEmailName
-              title="Email Adress"
-            />
-            <Input
-              onChange={handlePassword}
-              value={password}
-              title="Password"
-              inputPassword
-            />
-            <Button btnForLogin>Login</Button>
-          </form>
-        </div>
+        {animation ? (
+          <div className="card-login">
+            <h1 className="title-login">log into your account!</h1>
+            <form onSubmit={handleClick}>
+              <Input
+                onChange={handleUsername}
+                value={email}
+                placeholder="you@example.com"
+                inputEmailName
+                title="Email Adress"
+              />
+              <Input
+                onChange={handlePassword}
+                value={password}
+                title="Password"
+                inputPassword
+              />
+              {password.length >= 6 && email.length >= 2 ? (
+                <Button btnForLogin>Login</Button>
+              ) : (
+                ''
+              )}
+            </form>
+          </div>
+        ) : (
+          <div className="card-login">
+            <Spinners></Spinners>
+          </div>
+        )}
       </div>
     </section>
   );
