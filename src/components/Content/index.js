@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Foto_acara from '../../assets/image/foto-acara.jpg';
 import Lock from '../../assets/image/lock.svg';
 import Shield from '../../assets/image/shield.svg';
+import Fade from 'react-reveal';
 
 function Index({ setLogin }) {
   // useEffect(() => {
@@ -16,26 +17,28 @@ function Index({ setLogin }) {
         <div className="lebel">Now Events</div>
         <div className="container__acara">
           {/* Acara satu */}
-          <div className="box_1_content">
-            <div className="foto_acara">
-              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
+          <Fade bottom delay={5000}>
+            <div className="box_1_content">
+              <div className="foto_acara">
+                <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
+              </div>
+              <h3 className="title_acara">Judul Acara</h3>
+              <p className="descripsi_acara">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+                molestias consequatur aspernatur corrupti voluptates voluptas
+                laudantium inventore fuga est.
+              </p>
+              <ul className="point_point_acara">
+                <li className="point_1">Point 1</li>
+                <li className="point_2">Point 2</li>
+              </ul>
+              <Link to="/details">
+                <button type="button" className="btn_content">
+                  Details
+                </button>
+              </Link>
             </div>
-            <h3 className="title_acara">Judul Acara</h3>
-            <p className="descripsi_acara">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              molestias consequatur aspernatur corrupti voluptates voluptas
-              laudantium inventore fuga est.
-            </p>
-            <ul className="point_point_acara">
-              <li className="point_1">Point 1</li>
-              <li className="point_2">Point 2</li>
-            </ul>
-            <Link to="/details">
-              <button type="button" className="btn_content">
-                Details
-              </button>
-            </Link>
-          </div>
+          </Fade>
 
           {/* Acara dua */}
           <div className="box_content">
