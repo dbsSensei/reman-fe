@@ -3,12 +3,21 @@ import Logo from '../../assets/image/reman-logo.png';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 import './index.css';
+import { useHistory } from 'react-router-dom';
+import smiles from '../../assets/image/smiles.svg';
 
 export default function Index({ login }) {
   const [me, setMe] = useState('');
-  useEffect(() => {
-    const cookies = new Cookies();
 
+  const cookies = new Cookies();
+  const HandleLogout = e => {
+    const history = useHistory();
+    cookies.set('jwt', '', { path: '/' });
+    console.log(cookies.get('jwt'));
+    history.push('/');
+    e.prevendDefault();
+  };
+  useEffect(() => {
     axios
       .get('https://sureface-natours.herokuapp.com/api/v1/users/me', {
         headers: {
@@ -18,6 +27,7 @@ export default function Index({ login }) {
       })
       .then(res => {
         const name = res.data.data.data;
+        console.log(name);
         setMe(name.name);
       });
   }, []);
@@ -91,21 +101,20 @@ export default function Index({ login }) {
           }}
         >
           <nav className="nav wrapper-nav-header">
-            <button className="button-login-nav-header ">
-              <a
-                href="/login"
-                className="title-login-nav-header"
-                // style={{ float: 'right' }}
-              >
+            <button className="button-login-nav-header">
+              <a href="/login" className="title-login-nav-header">
                 Log out
               </a>
             </button>
           </nav>
           <nav>
-            <button className="button-signup-nav-header">
-              <a href="/profile" className="title-signup-nav-header">
-                {me}
-              </a>
+            <button className="button-login-nav-header" onClick={HandleLogout}>
+              <img
+                src={me.photo}
+                alt="foto-profile"
+                className="img-foto-profile-navbar"
+              />
+              <p className="title-login-nav-header">{me}</p>
             </button>
           </nav>
         </div>

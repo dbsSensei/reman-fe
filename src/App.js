@@ -17,7 +17,7 @@ function App() {
     <>
       <Router>
         <Route exact path="/">
-          <Home login={login} />
+          <Home login={login} setLogin={setLogin} />
         </Route>
         <Route exact path="/aux" component={Aux} />
         <Route exact path="/register">
@@ -33,7 +33,9 @@ function App() {
         <Route exact path="/profile">
           <Profile login={login} setLogin={setLogin} />
         </Route>
-        <Route exact path="/details" component={Details} />
+        <Route exact path="/details">
+          <Details setLogin={setLogin} login={login} />
+        </Route>
         <Route exact path="/spinners" component={Spinners} />
       </Router>
     </>
