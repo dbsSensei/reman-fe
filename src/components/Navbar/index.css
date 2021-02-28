@@ -7,15 +7,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
-  width: 94.7%;
-  margin-left: 40px;
+  /* margin-top: 40px; */
+  width: 100%;
+  /* margin-left: 40px; */
   border-radius: 4px 4px 0 0;
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; */
+  position: fixed;
 }
 .img-hero-header {
   height: 90px;

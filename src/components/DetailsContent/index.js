@@ -11,9 +11,9 @@ import akatsuki from '../../assets/image/Akatsuki.jpg';
 import konoha from '../../assets/image/konoha.jpg';
 
 const Index = ({ setLogin }) => {
-  useEffect(() => {
-    setLogin(true);
-  }, []);
+  // useEffect(() => {
+  //   setLogin(true);
+  // }, []);
 
   return (
     <div className="details_wrapper">

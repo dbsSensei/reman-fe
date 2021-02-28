@@ -6,11 +6,11 @@ import Lock from '../../assets/image/lock.svg';
 import Shield from '../../assets/image/shield.svg';
 
 function Index({ setLogin }) {
-  useEffect(() => {
-    setLogin(true);
-  }, []);
+  // useEffect(() => {
+  //   setLogin(true);
+  // }, []);
   return (
-    <div>
+    <div className="container-content">
       {/* Acara Baru */}
       <div className="card__newEvent">
         <div className="lebel">Now Events</div>
