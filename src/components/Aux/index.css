@@ -1,10 +1,9 @@
 .container-aux {
-  margin-left: 40px;
   background-color: #f7f7f7;
   margin-right: 31px;
   padding-top: 20px;
   height: 100%;
-  width: 94.7%;
+  width: 100%;
 }
 
 @media (max-width: 480px) {

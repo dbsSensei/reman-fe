@@ -24,11 +24,11 @@ function Login({ setLogin, animation, setAnimation }) {
         { withCredentials: true }
       )
       .then(res => {
+        setLogin(true);
         setEmail('');
         setPassword('');
         console.log(res);
         console.log(res.cookies);
-        setLogin(true);
         const cookies = new Cookies();
         cookies.set('jwt', res.data.token, { path: '/' });
         console.log(cookies.get('jwt'));

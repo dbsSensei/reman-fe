@@ -4,12 +4,13 @@ import Aux from '../components/Aux';
 import Profile from '../components/Profile';
 import Footer from '../components/Footer/index';
 
-export default function ProfilePage({ login, setLogin }) {
+export default function ProfilePage({ login }) {
+  console.log(login);
   return (
     <div>
       <Navbar login={login} />
       <Aux>
-        <Profile setLogin={setLogin} />
+        <Profile />
         <Footer />
       </Aux>
     </div>
