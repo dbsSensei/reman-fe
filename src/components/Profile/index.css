@@ -149,6 +149,8 @@
   margin: 40px 0 0 300px;
 }
 
+<<<<<<< HEAD
+=======
 .speaker {
   display: flex;
   flex-direction: row;
@@ -157,6 +159,7 @@
 .img_speaker {
   width: 70px;
 }
+>>>>>>> 8e635f6b9216b3be1f8d03d58009b198393ab49a
 
 @media only screen and (max-width: 480px) {
   .menu_sidebar {

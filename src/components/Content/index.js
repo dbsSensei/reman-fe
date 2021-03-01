@@ -1,234 +1,151 @@
 import React, { useEffect } from 'react';
-import './index.css';
-import { Link } from 'react-router-dom';
-import Foto_acara from '../../assets/image/foto-acara.jpg';
-import Lock from '../../assets/image/lock.svg';
-import Shield from '../../assets/image/shield.svg';
-import Fade from 'react-reveal';
 
-function Index({ setLogin }) {
+import './index.css';
+import Foto_acara from '../../assets/image/foto-acara.jpg';
+import Shield from '../../assets/image/shield.svg';
+import Lock from '../../assets/image/lock.svg';
+import NowEvents from '../../parts/BoxEvents/NowEvents/index';
+import NextEvents from '../../parts/BoxEvents/NextEvents/index';
+import PastEvents from '../../parts/BoxEvents/PastEvents/index';
+import Gap from 'parts/Gap';
+
+function Index(props) {
   // useEffect(() => {
-  //   setLogin(true);
+  //   props.setLogin(true);
   // }, []);
   return (
-    <div className="container-content">
-      {/* Acara Baru */}
+    <div>
+      {/* NOW EVENTS */}
       <div className="card__newEvent">
         <div className="lebel">Now Events</div>
         <div className="container__acara">
-          {/* Acara satu */}
-          <Fade bottom delay={5000}>
-            <div className="box_1_content">
-              <div className="foto_acara">
-                <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
-              </div>
-              <h3 className="title_acara">Judul Acara</h3>
-              <p className="descripsi_acara">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-                molestias consequatur aspernatur corrupti voluptates voluptas
-                laudantium inventore fuga est.
-              </p>
-              <ul className="point_point_acara">
-                <li className="point_1">Point 1</li>
-                <li className="point_2">Point 2</li>
-              </ul>
-              <Link to="/details">
-                <button type="button" className="btn_content">
-                  Details
-                </button>
-              </Link>
-            </div>
-          </Fade>
+          {/* NOW EVENTS Acara satu */}
+          <NowEvents
+            foto={Foto_acara}
+            judul="Judul Acara"
+            descripsi="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            molestias consequatur aspernatur corrupti voluptates voluptas
+            laudantium inventore fuga est."
+            point1="Point 1"
+            point2="Point 2"
+          />
 
-          {/* Acara dua */}
-          <div className="box_content">
-            <div className="foto_acara">
-              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
-            </div>
-            <h3 className="title_acara">Judul Acara</h3>
-            <p className="descripsi_acara">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+          {/* NOW EVENTS Acara dua */}
+          <Gap width={100} />
+          <NowEvents
+            foto={Foto_acara}
+            judul="Judul Acara"
+            descripsi="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
               molestias consequatur aspernatur corrupti voluptates voluptas
-              laudantium inventore fuga est.
-            </p>
-            <ul className="point_point_acara">
-              <li className="point_1">Point 1</li>
-              <li className="point_2">Point 2</li>
-            </ul>
-            <Link to="/details">
-              <button className="btn_content">Details</button>
-            </Link>
-          </div>
+              laudantium inventore fuga est."
+            point1="Point 1"
+            point2="Point 2"
+          />
 
-          {/* Acara tiga */}
-          <div className="box_content">
-            <div className="foto_acara">
-              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
-            </div>
-            <h3 className="title_acara">Judul Acara</h3>
-            <p className="descripsi_acara">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+          {/* NOW EVENTS Acara tiga */}
+          <Gap width={100} />
+          <NowEvents
+            foto={Foto_acara}
+            judul="Judul Acara"
+            descripsi="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
               molestias consequatur aspernatur corrupti voluptates voluptas
-              laudantium inventore fuga est.
-            </p>
-            <ul className="point_point_acara">
-              <li className="point_1">Point 1</li>
-              <li className="point_2">Point 2</li>
-            </ul>
-            <Link to="/details">
-              <button className="btn_content">Details</button>
-            </Link>
-            {/* <div style={{ height: 1000 }}>ppp</div> */}
-          </div>
+              laudantium inventore fuga est."
+            point1="Point 1"
+            point2="Point 2"
+          />
         </div>
       </div>
-      {/* Akhir Acara Baru */}
+      {/* LAST NOW EVENTS*/}
 
-      {/* Next Acara */}
+      {/* NEXT EVENTS */}
       <div className="card__newEvent">
         <div className="lebel">Next Events</div>
         <div className="container__acara">
-          {/* Acara satu */}
-          <div className="box_1_content">
-            <div className="foto_acara">
-              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
-              <div className="gradient"></div>
-              <img className="icon" src={Lock} alt="icon" />
-            </div>
-            <h3 className="title_acara">Judul Acara</h3>
-            <p className="descripsi_acara">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              molestias consequatur aspernatur corrupti voluptates voluptas
-              laudantium inventore fuga est.
-            </p>
-            <ul className="point_point_acara">
-              <li className="point_1">Point 1</li>
-              <li className="point_2">Point 2</li>
-            </ul>
-            <Link to="/details">
-              <button className="btn_content">Details</button>
-            </Link>
-          </div>
+          {/* Next EVENTS Acara satu */}
+          <NextEvents
+            foto={Foto_acara}
+            judul="Judul Acara"
+            icon={Lock}
+            descripsi="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            molestias consequatur aspernatur corrupti voluptates voluptas
+            laudantium inventore fuga est."
+            point1="Point 1"
+            point2="Point 2"
+          />
 
-          {/* Acara dua */}
-          <div className="box_content">
-            <div className="foto_acara">
-              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
-              <div className="gradient"></div>
-              <img className="icon" src={Lock} alt="icon" />
-            </div>
-            <h3 className="title_acara">Judul Acara</h3>
-            <p className="descripsi_acara">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              molestias consequatur aspernatur corrupti voluptates voluptas
-              laudantium inventore fuga est.
-            </p>
-            <ul className="point_point_acara">
-              <li className="point_1">Point 1</li>
-              <li className="point_2">Point 2</li>
-            </ul>
-            <Link to="/details">
-              <button className="btn_content">Details</button>
-            </Link>
-          </div>
+          {/* Next EVENTS Acara dua */}
+          <Gap width={100} />
+          <NextEvents
+            foto={Foto_acara}
+            judul="Judul Acara"
+            icon={Lock}
+            descripsi="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            molestias consequatur aspernatur corrupti voluptates voluptas
+            laudantium inventore fuga est."
+            point1="Point 1"
+            point2="Point 2"
+          />
 
-          {/* Acara tiga */}
-          <div className="box_content">
-            <div className="foto_acara">
-              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
-              <div className="gradient"></div>
-              <img className="icon" src={Lock} alt="icon" />
-            </div>
-            <h3 className="title_acara">Judul Acara</h3>
-            <p className="descripsi_acara">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              molestias consequatur aspernatur corrupti voluptates voluptas
-              laudantium inventore fuga est.
-            </p>
-            <ul className="point_point_acara">
-              <li className="point_1">Point 1</li>
-              <li className="point_2">Point 2</li>
-            </ul>
-            <Link to="/details">
-              <button className="btn_content">Details</button>
-            </Link>
-          </div>
+          {/* Next EVENTS Acara tiga */}
+          <Gap width={100} />
+          <NextEvents
+            foto={Foto_acara}
+            judul="Judul Acara"
+            icon={Lock}
+            descripsi="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            molestias consequatur aspernatur corrupti voluptates voluptas
+            laudantium inventore fuga est."
+            point1="Point 1"
+            point2="Point 2"
+          />
         </div>
       </div>
-      {/* Next Acara */}
+      {/* LAST NEXT EVENTS */}
 
-      {/* Past Acara */}
+      {/* PAST EVENTS */}
       <div className="card__newEvent">
         <div className="lebel">Past Events</div>
         <div className="container__acara">
-          {/* Acara satu */}
-          <div className="box_1_content">
-            <div className="foto_acara">
-              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
-              <div className="gradient_red"></div>
-              <img className="icon" src={Shield} alt="icon" />
-            </div>
-            <h3 className="title_acara">Judul Acara</h3>
-            <p className="descripsi_acara">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              molestias consequatur aspernatur corrupti voluptates voluptas
-              laudantium inventore fuga est.
-            </p>
-            <ul className="point_point_acara">
-              <li className="point_1">Point 1</li>
-              <li className="point_2">Point 2</li>
-            </ul>
-            <Link to="/details">
-              <button className="btn_content">Details</button>
-            </Link>
-          </div>
+          {/* PAST EVENTS Acara satu */}
+          <PastEvents
+            foto={Foto_acara}
+            judul="Judul Acara"
+            icon={Shield}
+            descripsi="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            molestias consequatur aspernatur corrupti voluptates voluptas
+            laudantium inventore fuga est."
+            point1="Point 1"
+            point2="Point 2"
+          />
 
-          {/* Acara dua */}
-          <div className="box_content">
-            <div className="foto_acara">
-              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
-              <div className="gradient_red"></div>
-              <img className="icon" src={Shield} alt="icon" />
-            </div>
-            <h3 className="title_acara">Judul Acara</h3>
-            <p className="descripsi_acara">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              molestias consequatur aspernatur corrupti voluptates voluptas
-              laudantium inventore fuga est.
-            </p>
-            <ul className="point_point_acara">
-              <li className="point_1">Point 1</li>
-              <li className="point_2">Point 2</li>
-            </ul>
-            <Link to="/details">
-              <button className="btn_content">Details</button>
-            </Link>
-          </div>
+          {/* PAST EVENTS Acara dua */}
+          <Gap width={100} />
+          <PastEvents
+            foto={Foto_acara}
+            judul="Judul Acara"
+            icon={Shield}
+            descripsi="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            molestias consequatur aspernatur corrupti voluptates voluptas
+            laudantium inventore fuga est."
+            point1="Point 1"
+            point2="Point 2"
+          />
 
-          {/* Acara tiga */}
-          <div className="box_content">
-            <div className="foto_acara">
-              <img className="foto__edit" src={Foto_acara} alt="Foto Acara" />
-              <div className="gradient_red"></div>
-              <img className="icon" src={Shield} alt="icon" />
-            </div>
-            <h3 className="title_acara">Judul Acara</h3>
-            <p className="descripsi_acara">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              molestias consequatur aspernatur corrupti voluptates voluptas
-              laudantium inventore fuga est.
-            </p>
-            <ul className="point_point_acara">
-              <li className="point_1">Point 1</li>
-              <li className="point_2">Point 2</li>
-            </ul>
-            <Link to="/details">
-              <button className="btn_content">Details</button>
-            </Link>
-          </div>
+          {/* PAST EVENTS Acara tiga */}
+          <Gap width={100} />
+          <PastEvents
+            foto={Foto_acara}
+            judul="Judul Acara"
+            icon={Shield}
+            descripsi="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            molestias consequatur aspernatur corrupti voluptates voluptas
+            laudantium inventore fuga est."
+            point1="Point 1"
+            point2="Point 2"
+          />
         </div>
       </div>
-      {/* Past Acara */}
+      {/* LAST PAST EVENTS */}
     </div>
   );
 }

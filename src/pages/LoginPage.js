@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Login from '../components/Login';
 import Aux from '../components/Aux';
 import Footer from '../components/Footer';
+import Gap from '../parts/Gap/index';
 
 export default function LoginPage({
   login,
@@ -15,6 +16,7 @@ export default function LoginPage({
     <div>
       <Navbar />
       <Aux style={{ height: 720 }}>
+        <Gap height={80} />
         <Login
           setLogin={setLogin}
           animation={animation}
