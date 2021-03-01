@@ -10,9 +10,9 @@ import PastEvents from '../../parts/BoxEvents/PastEvents/index';
 import Gap from 'parts/Gap';
 
 function Index(props) {
-  useEffect(() => {
-    props.setLogin(true);
-  }, []);
+  // useEffect(() => {
+  //   props.setLogin(true);
+  // }, []);
   return (
     <div>
       {/* NOW EVENTS */}

@@ -4,6 +4,7 @@ import Cookies from 'universal-cookie';
 import axios from 'axios';
 import './index.css';
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import smiles from '../../assets/image/smiles.svg';
 
 export default function Index({ login }) {
@@ -11,11 +12,12 @@ export default function Index({ login }) {
 
   const cookies = new Cookies();
   const HandleLogout = e => {
-    const history = useHistory();
+    // const history = useHistory();
     cookies.set('jwt', '', { path: '/' });
-    console.log(cookies.get('jwt'));
-    history.push('/');
-    e.prevendDefault();
+    // console.log(cookies.get('jwt'));
+    // history.push('/');
+    // e.prevendDefault();
+    console.log('logout di klik');
   };
   useEffect(() => {
     axios
@@ -28,7 +30,7 @@ export default function Index({ login }) {
       .then(res => {
         const name = res.data.data.data;
         console.log(name);
-        setMe(name.name);
+        setMe(name);
       });
   }, []);
   return !login ? (
@@ -101,20 +103,19 @@ export default function Index({ login }) {
           }}
         >
           <nav className="nav wrapper-nav-header">
-            <button className="button-login-nav-header">
-              <a href="/login" className="title-login-nav-header">
-                Log out
-              </a>
+            <button className="button-login-nav-header" onClick={HandleLogout}>
+              <a className="title-login-nav-header">Log out</a>
             </button>
           </nav>
           <nav>
-            <button className="button-login-nav-header" onClick={HandleLogout}>
+            <button className="button-login-nav-header">
               <img
-                src={me.photo}
+                src={smiles}
+                // `https://sureface-natours.herokuapp.com/img/users/${me.photo}`
                 alt="foto-profile"
                 className="img-foto-profile-navbar"
               />
-              <p className="title-login-nav-header">{me}</p>
+              <p className="title-login-nav-header">{me.name}</p>
             </button>
           </nav>
         </div>

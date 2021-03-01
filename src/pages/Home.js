@@ -8,10 +8,10 @@ function Home({ login, setLogin }) {
   console.log(login);
   return (
     <div>
-      <Navbar login={login} />
+      <Navbar login={login} setLogin={setLogin} />
       {/* Taruh NewEvents di bungkus div  ini */}
       <Aux style={{ marginRight: 31, height: 'auto' }}>
-        <Content setLogin={setLogin} />
+        <Content />
         <Footer />
       </Aux>
     </div>

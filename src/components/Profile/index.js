@@ -31,11 +31,11 @@ export default function Profile({ setLogin }) {
         setName(name);
         setEmail(email);
       });
-    setLogin(true);
   }, []);
 
   const handleClickUpdateUsername = e => {
     const cookies = new Cookies();
+    // if (login) { }
     axios
       .patch(
         'https://sureface-natours.herokuapp.com/api/v1/users/updateMe',
@@ -52,6 +52,7 @@ export default function Profile({ setLogin }) {
       .then(res => {
         console.log(res);
       });
+
     e.preventDefault();
   };
 

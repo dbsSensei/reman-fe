@@ -1,7 +1,11 @@
+.container-content {
+  margin-top: 100px;
+}
+
 .card__newEvent {
   width: auto;
   height: 640px;
-  background-color:white;
+  background-color: white;
   border-radius: 15px;
   margin: 10px 30px 40px 30px;
 }
@@ -46,7 +50,7 @@
   width: 271px;
   height: 200px;
   border-top-left-radius: 8px;
-  border-top-right-radius: 8px; 
+  border-top-right-radius: 8px;
   background-position: top;
   background-size: cover;
   position: relative;
@@ -63,18 +67,17 @@
 }
 
 .btn_content {
-    background-color: #55c9ff;
-    color: white;
-    width: 100%;
-    height: 57px;
-    border: 0 solid white;
-    font-size: 18px;
-    border: 40px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    cursor: pointer;
-    text-transform: uppercase;
-
+  background-color: #55c9ff;
+  color: white;
+  width: 100%;
+  height: 57px;
+  border: 0 solid white;
+  font-size: 18px;
+  border: 40px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .icon {
@@ -88,25 +91,23 @@
 .gradient {
   background-color: rgba(31, 255, 1, 0.5);
   border-top-left-radius: 8px;
-  border-top-right-radius: 8px; 
+  border-top-right-radius: 8px;
   width: 271px;
   height: 200px;
   position: absolute;
   top: 0;
-  
 }
 
 .gradient_red {
   background-color: rgba(255, 1, 1, 0.5);
   border-top-left-radius: 8px;
-  border-top-right-radius: 8px; 
+  border-top-right-radius: 8px;
   width: 271px;
   height: 200px;
   position: absolute;
   top: 0;
-  
 }
-  
+
 .title_acara {
   margin-left: 20px;
   margin-right: 20px;
@@ -132,7 +133,7 @@
   .card__newEvent {
     width: auto;
     height: auto;
-    background-color:white;
+    background-color: white;
     border-radius: 15px;
     margin: 10px 30px 40px 30px;
   }
